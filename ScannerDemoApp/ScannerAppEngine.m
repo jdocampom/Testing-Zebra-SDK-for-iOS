@@ -175,7 +175,7 @@ zt_ScannerAppEngine *_g_sharedAppEngine = nil;
         /***
          Changed the default opmode all
          */
-        op_mode = SBT_OPMODE_ALL;
+        op_mode = SBT_OPMODE_BTLE;
         [settings setInteger:op_mode forKey:ZT_SETTING_OPMODE];
         [settings setBool:YES forKey:ZT_SETTING_SCANNER_DETECTION];
         [settings setBool:YES forKey:ZT_SETTING_EVENT_ACTIVE];

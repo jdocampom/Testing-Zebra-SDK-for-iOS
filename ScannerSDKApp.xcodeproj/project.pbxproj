@@ -16,7 +16,6 @@
 		784488F5183E47FD009F9862 /* ConfigurationListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 784488F4183E47FD009F9862 /* ConfigurationListVC.m */; };
 		784488F8183E4DC3009F9862 /* ConfigurationSingleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 784488F7183E4DC3009F9862 /* ConfigurationSingleVC.m */; };
 		784488FB183E509A009F9862 /* ScannerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 784488FA183E509A009F9862 /* ScannerConfiguration.m */; };
-		78729D1D181AB6FE00CDBAC5 /* AppSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78729D1C181AB6FE00CDBAC5 /* AppSettingsVC.m */; };
 		78729D2F182CCAC200CDBAC5 /* ActiveScannerSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78729D2E182CCAC200CDBAC5 /* ActiveScannerSettingsVC.m */; };
 		78729D33182CCF1700CDBAC5 /* BarcodeTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 78729D32182CCF1700CDBAC5 /* BarcodeTypes.m */; };
 		787690D0183CB7730002EBFE /* scanner_launch-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787690BE183CB7730002EBFE /* scanner_launch-568h@2x.png */; };
@@ -184,8 +183,6 @@
 		784488F7183E4DC3009F9862 /* ConfigurationSingleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationSingleVC.m; sourceTree = "<group>"; };
 		784488F9183E509A009F9862 /* ScannerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerConfiguration.h; sourceTree = "<group>"; };
 		784488FA183E509A009F9862 /* ScannerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerConfiguration.m; sourceTree = "<group>"; };
-		78729D1B181AB6FE00CDBAC5 /* AppSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingsVC.h; sourceTree = "<group>"; };
-		78729D1C181AB6FE00CDBAC5 /* AppSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingsVC.m; sourceTree = "<group>"; };
 		78729D1E181AB78B00CDBAC5 /* AppSettingsKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppSettingsKeys.h; sourceTree = "<group>"; };
 		78729D2D182CCAC200CDBAC5 /* ActiveScannerSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveScannerSettingsVC.h; sourceTree = "<group>"; };
 		78729D2E182CCAC200CDBAC5 /* ActiveScannerSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveScannerSettingsVC.m; sourceTree = "<group>"; };
@@ -574,8 +571,6 @@
 				787C4DC1181117E4006C736F /* SymbologiesVC.h */,
 				787C4DC2181117E4006C736F /* SymbologiesVC.m */,
 				78729D1E181AB78B00CDBAC5 /* AppSettingsKeys.h */,
-				78729D1B181AB6FE00CDBAC5 /* AppSettingsVC.h */,
-				78729D1C181AB6FE00CDBAC5 /* AppSettingsVC.m */,
 				78DF5C4A1845D39100274BDD /* AppSettingsBackgroundVC.h */,
 				78DF5C4B1845D39100274BDD /* AppSettingsBackgroundVC.m */,
 				784488F3183E47FD009F9862 /* ConfigurationListVC.h */,
@@ -1129,7 +1124,6 @@
 				7D45BB491DE1E91F00B66462 /* ZZStandardDecryptInputStream.mm in Sources */,
 				1EE6DC3B2505D79D0074F11F /* UIColor+DarkModeExtension.m in Sources */,
 				78DF5C64189138A000274BDD /* BeeperSettingsVC.m in Sources */,
-				78729D1D181AB6FE00CDBAC5 /* AppSettingsVC.m in Sources */,
 				7D45BB1A1DE1E91F00B66462 /* DGActivityIndicatorBallClipRotatePulseAnimation.m in Sources */,
 				7D45BB1C1DE1E91F00B66462 /* DGActivityIndicatorBallGridPulseAnimation.m in Sources */,
 				7D45BB201DE1E91F00B66462 /* DGActivityIndicatorBallScaleAnimation.m in Sources */,

@@ -18,7 +18,7 @@
 #import <CoreText/CTStringAttributes.h>
 #import <CoreText/CoreText.h>
 #import "config.h"
-#import "AppSettingsVC.h"
+//#import "AppSettingsVC.h"
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
 #import "ConnectionManager.h"
