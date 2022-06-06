@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FWFileCellTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVg-HT-nex">
+                        <rect key="frame" x="56" y="11" width="199" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27.5" id="mn2-AA-2VF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8S-ia-1bb">
+                        <rect key="frame" x="263" y="10" width="48" height="30"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="uu6-NK-DLq"/>
+                            <constraint firstAttribute="width" constant="48" id="zUI-wb-vwn"/>
+                        </constraints>
+                        <state key="normal" title="Select"/>
+                        <connections>
+                            <action selector="clickSelected:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HmS-Tw-SKj"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4JL-IF-Car">
+                        <rect key="frame" x="14" y="8" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="L0x-pO-Hw7"/>
+                            <constraint firstAttribute="height" constant="23.5" id="S9T-hQ-6Vz"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="3" id="45w-fF-0tc"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="leading" secondItem="4JL-IF-Car" secondAttribute="trailing" constant="18" id="5J9-kD-ICZ"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5d7-ZB-MwI"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4JL-IF-Car" secondAttribute="bottom" constant="-6" id="6Ho-WS-5n1"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="EnH-BR-R64"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="Fji-wd-vCd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4JL-IF-Car" secondAttribute="bottom" constant="-6" id="GIY-KZ-vZF"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GQ3-xc-yf8"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="KAz-d2-Rsf"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="-2" id="NxF-dJ-Ia8"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="leading" secondItem="4JL-IF-Car" secondAttribute="trailing" constant="6" id="OIW-k3-mw5"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="centerY" secondItem="4JL-IF-Car" secondAttribute="centerY" constant="-3" id="Pdm-UI-xgS"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="V8S-ia-1bb" secondAttribute="bottom" constant="-4.5" id="RBt-pP-zuk"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="RKf-2N-F22"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="V8S-ia-1bb" secondAttribute="trailing" constant="1" id="V1G-Nd-Hra"/>
+                    <constraint firstItem="V8S-ia-1bb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="Z0o-Gv-AGF"/>
+                    <constraint firstItem="V8S-ia-1bb" firstAttribute="centerX" secondItem="WVg-HT-nex" secondAttribute="centerX" constant="134" id="dzc-5V-SnH"/>
+                    <constraint firstItem="V8S-ia-1bb" firstAttribute="leading" secondItem="WVg-HT-nex" secondAttribute="trailing" constant="8" id="jge-59-GeV"/>
+                    <constraint firstItem="4JL-IF-Car" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="jxH-wh-x24"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="3" id="oZ5-sS-rvF"/>
+                    <constraint firstItem="V8S-ia-1bb" firstAttribute="leading" secondItem="WVg-HT-nex" secondAttribute="trailing" constant="6" id="tAe-M6-lcP"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="tWO-F7-V4W"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="centerX" secondItem="4JL-IF-Car" secondAttribute="centerX" constant="134" id="uhk-MA-Ie2"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="centerX" secondItem="4JL-IF-Car" secondAttribute="centerX" constant="134" id="uyz-az-Trk"/>
+                    <constraint firstItem="WVg-HT-nex" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" constant="3" id="va1-sM-Wrr"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="4JL-IF-Car" secondAttribute="bottom" constant="4" id="ykX-e5-v00"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="6Ho-WS-5n1"/>
+                        <exclude reference="GIY-KZ-vZF"/>
+                        <exclude reference="GQ3-xc-yf8"/>
+                        <exclude reference="NxF-dJ-Ia8"/>
+                        <exclude reference="RKf-2N-F22"/>
+                        <exclude reference="jxH-wh-x24"/>
+                        <exclude reference="45w-fF-0tc"/>
+                        <exclude reference="Fji-wd-vCd"/>
+                        <exclude reference="KAz-d2-Rsf"/>
+                        <exclude reference="OIW-k3-mw5"/>
+                        <exclude reference="Pdm-UI-xgS"/>
+                        <exclude reference="oZ5-sS-rvF"/>
+                        <exclude reference="uhk-MA-Ie2"/>
+                        <exclude reference="uyz-az-Trk"/>
+                        <exclude reference="dzc-5V-SnH"/>
+                        <exclude reference="tAe-M6-lcP"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fileImage" destination="4JL-IF-Car" id="TmC-6x-UQs"/>
+                <outlet property="fileName" destination="WVg-HT-nex" id="mH3-sO-vMD"/>
+                <outlet property="imageView" destination="4JL-IF-Car" id="Ik4-01-d7U"/>
+                <outlet property="okButton" destination="V8S-ia-1bb" id="j6N-r9-Bo3"/>
+                <outlet property="textLabel" destination="WVg-HT-nex" id="FMx-XV-7dS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uqd-M0-G9E" customClass="zt_ConnectionHelpSetDefaultsView">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="171"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan the barcode below to restore to default parameters:" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k18-L2-JgJ">
+                    <rect key="frame" x="15" y="15" width="346" height="45"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPq-lE-1wr">
+                    <rect key="frame" x="52.5" y="68" width="271" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="Pfw-j2-fy1"/>
+                        <constraint firstAttribute="width" constant="271" id="Ute-SX-tep"/>
+                    </constraints>
+                </view>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sQo-Mb-ocp">
+                    <rect key="frame" x="58.5" y="75" width="259.5" height="76"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="259.5" id="JqO-fs-CQy"/>
+                        <constraint firstAttribute="height" constant="76" id="ryw-xf-8Ee"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="FYC-CL-XQE" appends="YES" id="y7M-RM-6so"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="sQo-Mb-ocp" secondAttribute="bottom" constant="20" id="2zW-oa-AjX"/>
+                <constraint firstAttribute="trailing" secondItem="k18-L2-JgJ" secondAttribute="trailing" constant="15" id="67T-6O-X5V"/>
+                <constraint firstItem="sQo-Mb-ocp" firstAttribute="top" secondItem="k18-L2-JgJ" secondAttribute="bottom" constant="15" id="6GE-PB-ihW"/>
+                <constraint firstItem="sQo-Mb-ocp" firstAttribute="centerX" secondItem="uqd-M0-G9E" secondAttribute="centerX" id="9lW-wV-CRY"/>
+                <constraint firstItem="pPq-lE-1wr" firstAttribute="centerY" secondItem="sQo-Mb-ocp" secondAttribute="centerY" id="Fcq-Od-J83"/>
+                <constraint firstItem="k18-L2-JgJ" firstAttribute="leading" secondItem="uqd-M0-G9E" secondAttribute="leading" constant="15" id="KYr-p4-jSu"/>
+                <constraint firstItem="pPq-lE-1wr" firstAttribute="leading" secondItem="uqd-M0-G9E" secondAttribute="leading" constant="52.5" id="aw1-AK-lqS"/>
+                <constraint firstItem="pPq-lE-1wr" firstAttribute="centerX" secondItem="sQo-Mb-ocp" secondAttribute="centerX" id="bKa-AR-GIK"/>
+                <constraint firstAttribute="trailing" secondItem="pPq-lE-1wr" secondAttribute="trailing" constant="52.5" id="dcl-3K-yec"/>
+                <constraint firstItem="k18-L2-JgJ" firstAttribute="top" secondItem="uqd-M0-G9E" secondAttribute="top" constant="15" id="eU0-vR-6zO"/>
+                <constraint firstAttribute="bottom" secondItem="sQo-Mb-ocp" secondAttribute="bottom" id="g8u-ph-Z7o"/>
+                <constraint firstItem="pPq-lE-1wr" firstAttribute="top" secondItem="k18-L2-JgJ" secondAttribute="bottom" constant="8" id="xB4-AP-fqf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="g8u-ph-Z7o"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="lableInstructions" destination="k18-L2-JgJ" id="rio-uv-SCB"/>
+                <outlet property="setDefaultsBarcodeImage" destination="sQo-Mb-ocp" id="iZx-jV-VGG"/>
+            </connections>
+            <point key="canvasLocation" x="263.768115942029" y="-110.15625"/>
+        </view>
+        <pinchGestureRecognizer id="FYC-CL-XQE">
+            <connections>
+                <action selector="twoFingerPinch:" destination="uqd-M0-G9E" id="Cl8-Ln-bsa"/>
+                <outlet property="delegate" destination="uqd-M0-G9E" id="Hho-sf-OeW"/>
+            </connections>
+        </pinchGestureRecognizer>
+    </objects>
+</document>

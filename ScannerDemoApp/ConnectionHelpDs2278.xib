@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ConnectionHelpDs2278View">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.  If previously paired, use Bluetooth Settings to unpair the DS2278." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUO-vj-zRE">
+                    <rect key="frame" x="15" y="15" width="345" height="45.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.  Go to BT LE barcode screen and scan the STC barcode provided." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SOj-iy-xm5">
+                    <rect key="frame" x="15" y="123.5" width="345" height="45.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.  Tap the &quot;Pair&quot; button when the &quot;Bluetooth Pairing Request&quot; prompt appears." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="91d-Uw-tBW">
+                    <rect key="frame" x="15" y="189" width="345" height="68.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.  Enable Bluetooth on the device." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sgz-pW-9kW">
+                    <rect key="frame" x="15" y="80.5" width="345" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sgz-pW-9kW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="2E9-VN-pFw"/>
+                <constraint firstAttribute="trailing" secondItem="LUO-vj-zRE" secondAttribute="trailing" constant="15" id="5gi-Kg-nWS"/>
+                <constraint firstItem="SOj-iy-xm5" firstAttribute="top" secondItem="sgz-pW-9kW" secondAttribute="bottom" constant="20" id="6me-V5-oep"/>
+                <constraint firstItem="SOj-iy-xm5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Fdh-0N-rde"/>
+                <constraint firstItem="sgz-pW-9kW" firstAttribute="top" secondItem="LUO-vj-zRE" secondAttribute="bottom" constant="20" id="G1t-rw-Ffw"/>
+                <constraint firstItem="91d-Uw-tBW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="GY5-Iu-5y8"/>
+                <constraint firstAttribute="trailing" secondItem="SOj-iy-xm5" secondAttribute="trailing" constant="15" id="Mz0-Et-Tdp"/>
+                <constraint firstItem="91d-Uw-tBW" firstAttribute="top" secondItem="SOj-iy-xm5" secondAttribute="bottom" constant="20" id="ZL2-uJ-NJW"/>
+                <constraint firstItem="LUO-vj-zRE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="h4R-Oq-p49"/>
+                <constraint firstAttribute="trailing" secondItem="sgz-pW-9kW" secondAttribute="trailing" constant="15" id="onB-Vv-kxh"/>
+                <constraint firstItem="LUO-vj-zRE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="owW-s5-ccW"/>
+                <constraint firstAttribute="trailing" secondItem="91d-Uw-tBW" secondAttribute="trailing" constant="15" id="vLE-sw-Gun"/>
+            </constraints>
+            <point key="canvasLocation" x="23.199999999999999" y="50.824587706146929"/>
+        </view>
+    </objects>
+</document>

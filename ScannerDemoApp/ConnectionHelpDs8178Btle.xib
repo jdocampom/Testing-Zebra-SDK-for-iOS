@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oI4-wR-zJh" userLabel="Zt Connection Help LiDs3678 View" customClass="zt_ConnectionHelpLiDs3678View">
+            <rect key="frame" x="0.0" y="0.0" width="376" height="665"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.  If previously paired, use Bluetooth Settings to unpair the DS8178/CS6080." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Cf4-TC-W1g">
+                    <rect key="frame" x="15" y="15" width="346" height="45.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.  Go to BT LE barcode screen and scan the STC barcode provided." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-ni-Zm1">
+                    <rect key="frame" x="15" y="123.5" width="346" height="45.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.  Tap the &quot;Pair&quot; button when the &quot;Bluetooth Pairing Request&quot; prompt appears." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ABB-qs-bkb">
+                    <rect key="frame" x="15" y="189" width="346" height="68.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.  Enable Bluetooth on the device." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AIT-3h-5Yw">
+                    <rect key="frame" x="15" y="80.5" width="346" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Cf4-TC-W1g" secondAttribute="trailing" constant="15" id="8ua-z8-Os7"/>
+                <constraint firstAttribute="trailing" secondItem="4qe-ni-Zm1" secondAttribute="trailing" constant="15" id="ChH-a1-bKv"/>
+                <constraint firstItem="4qe-ni-Zm1" firstAttribute="leading" secondItem="oI4-wR-zJh" secondAttribute="leading" constant="15" id="DFz-3h-9YW"/>
+                <constraint firstItem="AIT-3h-5Yw" firstAttribute="top" secondItem="Cf4-TC-W1g" secondAttribute="bottom" constant="20" id="DPO-zv-YbC"/>
+                <constraint firstItem="4qe-ni-Zm1" firstAttribute="top" secondItem="AIT-3h-5Yw" secondAttribute="bottom" constant="20" id="L5q-re-7IA"/>
+                <constraint firstAttribute="trailing" secondItem="ABB-qs-bkb" secondAttribute="trailing" constant="15" id="Uhg-ns-Qit"/>
+                <constraint firstItem="ABB-qs-bkb" firstAttribute="top" secondItem="4qe-ni-Zm1" secondAttribute="bottom" constant="20" id="ZLk-DE-vIF"/>
+                <constraint firstAttribute="trailing" secondItem="AIT-3h-5Yw" secondAttribute="trailing" constant="15" id="g5Q-IN-VOy"/>
+                <constraint firstItem="Cf4-TC-W1g" firstAttribute="top" secondItem="oI4-wR-zJh" secondAttribute="top" constant="15" id="gMa-82-2J0"/>
+                <constraint firstItem="Cf4-TC-W1g" firstAttribute="leading" secondItem="oI4-wR-zJh" secondAttribute="leading" constant="15" id="jFK-tB-FPw"/>
+                <constraint firstItem="ABB-qs-bkb" firstAttribute="leading" secondItem="oI4-wR-zJh" secondAttribute="leading" constant="15" id="sFJ-hU-wb5"/>
+                <constraint firstItem="AIT-3h-5Yw" firstAttribute="leading" secondItem="oI4-wR-zJh" secondAttribute="leading" constant="15" id="yNC-xD-di1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-242.0289855072464" y="124.88839285714285"/>
+        </view>
+        <pinchGestureRecognizer id="j6J-eR-x8z" userLabel="Pinch-FactoryDefaults">
+            <connections>
+                <action selector="twoFingerPinch:" destination="oI4-wR-zJh" id="x4x-v8-3bR"/>
+                <outlet property="delegate" destination="oI4-wR-zJh" id="cWX-hN-vQ0"/>
+            </connections>
+        </pinchGestureRecognizer>
+        <pinchGestureRecognizer id="Qcr-kb-uT5" userLabel="Pinch-SsiBtLeBarcode">
+            <connections>
+                <action selector="twoFingerPinch:" destination="oI4-wR-zJh" id="fcx-b7-uOu"/>
+                <outlet property="delegate" destination="oI4-wR-zJh" id="vgQ-LU-REw"/>
+            </connections>
+        </pinchGestureRecognizer>
+    </objects>
+</document>
