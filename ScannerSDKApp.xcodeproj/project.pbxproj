@@ -45,11 +45,7 @@
 		78BDAE55199240010043FEB6 /* DecodeEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BDAE54199240010043FEB6 /* DecodeEvent.m */; };
 		78BFBB1F1909192500F03BAE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78BFBB1E1909192500F03BAE /* CoreBluetooth.framework */; };
 		78DF5C41183F629A00274BDD /* ActiveScannerImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C40183F629A00274BDD /* ActiveScannerImageVC.m */; };
-		78DF5C4C1845D39100274BDD /* AppSettingsBackgroundVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C4B1845D39100274BDD /* AppSettingsBackgroundVC.m */; };
 		78DF5C5D1888117C00274BDD /* Symbology.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C5C1888117C00274BDD /* Symbology.m */; };
-		78DF5C64189138A000274BDD /* BeeperSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C63189138A000274BDD /* BeeperSettingsVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		78DF5C6A1891563C00274BDD /* LedActionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C691891563C00274BDD /* LedActionVC.m */; };
-		78DF5C6D189696B700274BDD /* BeeperActionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DF5C6C189696B700274BDD /* BeeperActionVC.m */; };
 		78DF5CF918BF8D6700274BDD /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 78DF5CF718BF8D6700274BDD /* iTunesArtwork.png */; };
 		78DF5CFA18BF8D6700274BDD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 78DF5CF818BF8D6700274BDD /* iTunesArtwork@2x.png */; };
 		78DF5D2718BF8D7D00274BDD /* tab_barcode_f.png in Resources */ = {isa = PBXBuildFile; fileRef = 78DF5D0918BF8D7D00274BDD /* tab_barcode_f.png */; };
@@ -228,16 +224,8 @@
 		78DF5C3E183F5DC100274BDD /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		78DF5C3F183F629A00274BDD /* ActiveScannerImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveScannerImageVC.h; sourceTree = "<group>"; };
 		78DF5C40183F629A00274BDD /* ActiveScannerImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveScannerImageVC.m; sourceTree = "<group>"; };
-		78DF5C4A1845D39100274BDD /* AppSettingsBackgroundVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppSettingsBackgroundVC.h; sourceTree = "<group>"; };
-		78DF5C4B1845D39100274BDD /* AppSettingsBackgroundVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppSettingsBackgroundVC.m; sourceTree = "<group>"; };
 		78DF5C5B1888117C00274BDD /* Symbology.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbology.h; sourceTree = "<group>"; };
 		78DF5C5C1888117C00274BDD /* Symbology.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Symbology.m; sourceTree = "<group>"; };
-		78DF5C62189138A000274BDD /* BeeperSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeperSettingsVC.h; sourceTree = "<group>"; };
-		78DF5C63189138A000274BDD /* BeeperSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeperSettingsVC.m; sourceTree = "<group>"; };
-		78DF5C681891563C00274BDD /* LedActionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LedActionVC.h; sourceTree = "<group>"; };
-		78DF5C691891563C00274BDD /* LedActionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LedActionVC.m; sourceTree = "<group>"; };
-		78DF5C6B189696B700274BDD /* BeeperActionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeeperActionVC.h; sourceTree = "<group>"; };
-		78DF5C6C189696B700274BDD /* BeeperActionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeeperActionVC.m; sourceTree = "<group>"; };
 		78DF5CF718BF8D6700274BDD /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = ../iTunesArtwork.png; sourceTree = "<group>"; };
 		78DF5CF818BF8D6700274BDD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "../iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		78DF5D0918BF8D7D00274BDD /* tab_barcode_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_barcode_f.png; sourceTree = "<group>"; };
@@ -560,19 +548,11 @@
 				78729D2E182CCAC200CDBAC5 /* ActiveScannerSettingsVC.m */,
 				B42F8B281BCC36F6004C87AF /* BarcodeEventVC.h */,
 				B42F8B291BCC36F6004C87AF /* BarcodeEventVC.m */,
-				78DF5C681891563C00274BDD /* LedActionVC.h */,
-				78DF5C691891563C00274BDD /* LedActionVC.m */,
-				78DF5C6B189696B700274BDD /* BeeperActionVC.h */,
-				78DF5C6C189696B700274BDD /* BeeperActionVC.m */,
-				78DF5C62189138A000274BDD /* BeeperSettingsVC.h */,
-				78DF5C63189138A000274BDD /* BeeperSettingsVC.m */,
 				78DF5C5B1888117C00274BDD /* Symbology.h */,
 				78DF5C5C1888117C00274BDD /* Symbology.m */,
 				787C4DC1181117E4006C736F /* SymbologiesVC.h */,
 				787C4DC2181117E4006C736F /* SymbologiesVC.m */,
 				78729D1E181AB78B00CDBAC5 /* AppSettingsKeys.h */,
-				78DF5C4A1845D39100274BDD /* AppSettingsBackgroundVC.h */,
-				78DF5C4B1845D39100274BDD /* AppSettingsBackgroundVC.m */,
 				784488F3183E47FD009F9862 /* ConfigurationListVC.h */,
 				784488F4183E47FD009F9862 /* ConfigurationListVC.m */,
 				784488F9183E509A009F9862 /* ScannerConfiguration.h */,
@@ -1050,7 +1030,6 @@
 				787C4DA2180D76C9006C736F /* main.m in Sources */,
 				787C4DA6180D76C9006C736F /* ScannerDemoAppDelegate.m in Sources */,
 				78DF5D3918D433C700274BDD /* BarcodeList.m in Sources */,
-				78DF5C6D189696B700274BDD /* BeeperActionVC.m in Sources */,
 				7D45BB441DE1E91F00B66462 /* ZZNewArchiveEntry.mm in Sources */,
 				7D61570A1BD4A31A009E5D12 /* AssetDetailsVC.m in Sources */,
 				784488FB183E509A009F9862 /* ScannerConfiguration.m in Sources */,
@@ -1090,7 +1069,6 @@
 				78DF5C41183F629A00274BDD /* ActiveScannerImageVC.m in Sources */,
 				7D45BB361DE1E91F00B66462 /* DGActivityIndicatorTwoDotsAnimation.m in Sources */,
 				7D61C2951D2A59F900D59AD0 /* FWFilesTableVC.m in Sources */,
-				78DF5C6A1891563C00274BDD /* LedActionVC.m in Sources */,
 				7D45BB371DE1E91F00B66462 /* DGActivityIndicatorView.m in Sources */,
 				7D45BB181DE1E91F00B66462 /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
 				7D45BB461DE1E91F00B66462 /* ZZOldArchiveEntry.mm in Sources */,
@@ -1100,7 +1078,6 @@
 				7D45BB1D1DE1E91F00B66462 /* DGActivityIndicatorBallPulseAnimation.m in Sources */,
 				784488F5183E47FD009F9862 /* ConfigurationListVC.m in Sources */,
 				787C4E0718192B3B006C736F /* ActiveScannerVC.m in Sources */,
-				78DF5C4C1845D39100274BDD /* AppSettingsBackgroundVC.m in Sources */,
 				7DFB49931DE0842800FEAA70 /* FWUpdateModel.m in Sources */,
 				7D45BB471DE1E91F00B66462 /* ZZOldArchiveEntryWriter.mm in Sources */,
 				7D45BB331DE1E91F00B66462 /* DGActivityIndicatorTriangleSkewSpinAnimation.m in Sources */,
@@ -1123,7 +1100,6 @@
 				7D45BB341DE1E91F00B66462 /* DGActivityIndicatorTriplePulseAnimation.m in Sources */,
 				7D45BB491DE1E91F00B66462 /* ZZStandardDecryptInputStream.mm in Sources */,
 				1EE6DC3B2505D79D0074F11F /* UIColor+DarkModeExtension.m in Sources */,
-				78DF5C64189138A000274BDD /* BeeperSettingsVC.m in Sources */,
 				7D45BB1A1DE1E91F00B66462 /* DGActivityIndicatorBallClipRotatePulseAnimation.m in Sources */,
 				7D45BB1C1DE1E91F00B66462 /* DGActivityIndicatorBallGridPulseAnimation.m in Sources */,
 				7D45BB201DE1E91F00B66462 /* DGActivityIndicatorBallScaleAnimation.m in Sources */,

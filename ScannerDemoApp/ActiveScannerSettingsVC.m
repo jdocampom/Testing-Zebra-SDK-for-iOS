@@ -19,7 +19,7 @@
 #import "config.h"
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
-#import "BeeperSettingsVC.h"
+//#import "BeeperSettingsVC.h"
 #import "UpdateFirmwareVC.h"
 #import "RMDAttributes.h"
 #import "VirtualTetherTableViewController.h"
@@ -262,20 +262,20 @@
             }
 
         }
-        else if ([indexPath row] == 1 /*&& NO == m_HideBeeperSettings*/) /* Beeper*/
-        {
-            zt_BeeperSettingsVC *beeper_vc = nil;
-            
-            beeper_vc = (zt_BeeperSettingsVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_BEEPER_VC];
-            
-            if (beeper_vc != nil)
-            {
-                [beeper_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
-                [self.navigationController pushViewController:beeper_vc animated:YES];
-                /* beeper_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
-            }
-
-        }
+//        else if ([indexPath row] == 1 /*&& NO == m_HideBeeperSettings*/) /* Beeper*/
+//        {
+//            zt_BeeperSettingsVC *beeper_vc = nil;
+//
+//            beeper_vc = (zt_BeeperSettingsVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_BEEPER_VC];
+//
+//            if (beeper_vc != nil)
+//            {
+//                [beeper_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
+//                [self.navigationController pushViewController:beeper_vc animated:YES];
+//                /* beeper_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
+//            }
+//
+//        }
         else if ([indexPath row] == 2 /*(1 + (m_HideBeeperSettings == YES ? 0 : 1))*/ /* 3 */) /* enable scanning */
         {
             NSString *in_xml = [NSString stringWithFormat:@"<inArgs><scannerID>%d</scannerID></inArgs>", m_ScannerID];

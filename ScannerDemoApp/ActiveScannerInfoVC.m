@@ -19,8 +19,8 @@
 #import "ConnectionManager.h"
 #import "ScannerAppEngine.h"
 #import "config.h"
-#import "LedActionVC.h"
-#import "BeeperActionVC.h"
+//#import "LedActionVC.h"
+//#import "BeeperActionVC.h"
 #import "AssetDetailsVC.h"
 #import "NSString+Contain.h"
 
@@ -155,31 +155,31 @@ typedef enum
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    if ([indexPath section] == SECTION_ACTIONS) /* actions section */
-    {
-        if ([indexPath row] == 0) /* Beeper */
-        {
-            zt_BeeperActionVC *beeper_vc = (zt_BeeperActionVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_BEEPER_ACTION_VC];
-            
-            if (beeper_vc != nil)
-            {
-                [beeper_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
-                [self.navigationController pushViewController:beeper_vc animated:YES];
-                /* beeper_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
-            }
-        }
-        else if ([indexPath row] == 1) /* LED */
-        {
-            zt_LedActionVC *led_vc = (zt_LedActionVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_LED_ACTION_VC];
-            
-            if (led_vc != nil)
-            {
-                [led_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
-                [self.navigationController pushViewController:led_vc animated:YES];
-                /* led_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
-            }
-        }
-    }
+//    if ([indexPath section] == SECTION_ACTIONS) /* actions section */
+//    {
+//        if ([indexPath row] == 0) /* Beeper */
+//        {
+//            zt_BeeperActionVC *beeper_vc = (zt_BeeperActionVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_BEEPER_ACTION_VC];
+//            
+//            if (beeper_vc != nil)
+//            {
+//                [beeper_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
+//                [self.navigationController pushViewController:beeper_vc animated:YES];
+//                /* beeper_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
+//            }
+//        }
+//        else if ([indexPath row] == 1) /* LED */
+//        {
+//            zt_LedActionVC *led_vc = (zt_LedActionVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_LED_ACTION_VC];
+//            
+//            if (led_vc != nil)
+//            {
+//                [led_vc setScannerID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
+//                [self.navigationController pushViewController:led_vc animated:YES];
+//                /* led_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
+//            }
+//        }
+//    }
     
     if (([indexPath section] == SECTION_DISCONNECT) && ([indexPath row] == 0)) /* Disconnect button */
     {
