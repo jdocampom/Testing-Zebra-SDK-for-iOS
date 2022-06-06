@@ -17,17 +17,14 @@
 #import <UIKit/UIKit.h>
 #import "ScannerAppEngine.h"
 
-@interface zt_ActiveScannerVC : UITabBarController <IScannerAppEngineDevConnectionsDelegate>
-{
+@interface zt_ActiveScannerVC: UITabBarController <IScannerAppEngineDevConnectionsDelegate> {
     int m_ScannerID;
     BOOL m_WillDisappear;
 }
-
-- (void)setScannerID:(int)scannerID;
-- (int)getScannerID;
-- (void)showBarcode;
-- (void)showBarcodeList;
-- (void)showSettingsPage;
-- (void)showFirmwareUpdate:(int)currentScannerID;
-
+- (void) setScannerID:(int) scannerID;
+- (int) getScannerID;
+- (void) showBarcode;
+- (void) showBarcodeList;
+- (void) showSettingsPage;
+- (void) showFirmwareUpdate:(int) currentScannerID;
 @end

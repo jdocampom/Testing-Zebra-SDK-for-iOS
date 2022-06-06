@@ -17,12 +17,9 @@
 #import "AlertView.h"
 #import <UIKit/UIKit.h>
 
-@interface zt_ActiveScannerImageVC : UITableViewController
-{
+@interface zt_ActiveScannerImageVC: UITableViewController {
     int m_ScannerID;
     zt_AlertView *activityView;
 }
-
-- (void)performActionTriggerPullAndRelease:(NSString*)param;
-
+- (void) performActionTriggerPullAndRelease:(NSString*) param;
 @end

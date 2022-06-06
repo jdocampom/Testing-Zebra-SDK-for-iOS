@@ -16,10 +16,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface zt_ConfigurationListVC : UITableViewController
-{
+@interface zt_ConfigurationListVC: UITableViewController {
     NSMutableArray *m_SupportedConfigurations;
     NSInteger m_SelectedIndex;
 }
-
 @end

@@ -17,14 +17,11 @@
 #import "AlertView.h"
 #import <UIKit/UIKit.h>
 
-@interface zt_ActiveScannerInfoVC : UITableViewController
-{
+@interface zt_ActiveScannerInfoVC: UITableViewController {
     IBOutlet UILabel *m_lblScannerName;
     BOOL m_IsBusy;
     zt_AlertView *activityView;
 }
-
-- (void)updateUI;
-- (void)terminateCommunicationSession;
-
+- (void) updateUI;
+- (void) terminateCommunicationSession;
 @end

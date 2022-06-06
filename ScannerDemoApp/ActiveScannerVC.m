@@ -24,62 +24,56 @@
 //#import "MFiScannersTableVC.h"
 
 @interface zt_ActiveScannerVC ()
-
 @end
 
 @implementation zt_ActiveScannerVC
 
-/* default cstr for storyboard */
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self != nil)
-    {
+- (id) initWithCoder:(NSCoder*) aDecoder {
+    self = [super initWithCoder: aDecoder];
+    if (self != nil) {
         m_ScannerID = SBT_SCANNER_ID_INVALID;
         m_WillDisappear = NO;
-        [[zt_ScannerAppEngine sharedAppEngine] addDevConnectionsDelegate:self];
+        [[zt_ScannerAppEngine sharedAppEngine] addDevConnectionsDelegate: self];
     }
     return self;
 }
 
-- (void)dealloc
-{
-    [[zt_ScannerAppEngine sharedAppEngine] removeDevConnectiosDelegate:self];
+
+- (void)dealloc {
+    [[zt_ScannerAppEngine sharedAppEngine] removeDevConnectiosDelegate: self];
     [super dealloc];
 }
 
+
 ///A Boolean value indicating whether the toolbar at the bottom of the screen is hidden when the view controller is pushed on to a navigation controller.
--(BOOL)hidesBottomBarWhenPushed
-{
+- (BOOL) hidesBottomBarWhenPushed {
     return YES;
 }
 
+
 /// Called after the controller's view is loaded into memory.
-- (void)viewDidLoad
-{
+- (void) viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    [self setTitle:ACTIVE_SCANNER_TITLE];
-    [[zt_ScannerAppEngine sharedAppEngine] previousScannerpreviousScanner:0];
+    [self setTitle: ACTIVE_SCANNER_TITLE];
+    [[zt_ScannerAppEngine sharedAppEngine] previousScannerpreviousScanner: 0];
     self.navigationItem.hidesBackButton = YES;
-    UIBarButtonItem *customBackButton = [[UIBarButtonItem alloc] initWithTitle:ACTIVE_SCANNER_BACK_BUTTON_TITLE style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    UIBarButtonItem *customBackButton = [[UIBarButtonItem alloc] initWithTitle: ACTIVE_SCANNER_BACK_BUTTON_TITLE style:UIBarButtonItemStylePlain target: self action: @selector(back:)];
     self.navigationItem.leftBarButtonItem = customBackButton;
 }
 
+
 /// Perform your custom actions back buttom
 /// @param sender  button reference
-- (void) back:(UIBarButtonItem *)sender {
+- (void) back:(UIBarButtonItem*) sender {
     [self openDisconnectAlert];
 }
 
-- (void)openDisconnectAlert{
-    UIAlertController *popupMessageAlert = [UIAlertController alertControllerWithTitle:ACTIVE_SCANNER_DISCONNECT_ALERT_TITLE message:ACTIVE_SCANNER_DISCONNECT_ALERT_MESSAGE preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:ACTIVE_SCANNER_DISCONNECT_ALERT_CANCEL style:UIAlertActionStyleDefault
-                                   handler:NULL];
-    UIAlertAction *contiueAction = [UIAlertAction actionWithTitle:ACTIVE_SCANNER_DISCONNECT_ALERT_CONTINUE style:UIAlertActionStyleDefault
-                                   handler:^(UIAlertAction * action) {
-        ///Disable all virtual tether options on scanner disconnect
+
+- (void) openDisconnectAlert {
+    UIAlertController *popupMessageAlert = [UIAlertController alertControllerWithTitle: ACTIVE_SCANNER_DISCONNECT_ALERT_TITLE message: ACTIVE_SCANNER_DISCONNECT_ALERT_MESSAGE preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle: ACTIVE_SCANNER_DISCONNECT_ALERT_CANCEL style: UIAlertActionStyleDefault handler: NULL];
+    UIAlertAction *contiueAction = [UIAlertAction actionWithTitle: ACTIVE_SCANNER_DISCONNECT_ALERT_CONTINUE style: UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        /// Disable all virtual tether options on scanner disconnect.
         [[ConnectionManager sharedConnectionManager] resetAllVirtualTetherHostAlarmSetting];
         [[ConnectionManager sharedConnectionManager] disconnect];
     }];
@@ -89,46 +83,42 @@
     [self presentViewController:popupMessageAlert animated:YES completion:nil];
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear: animated];
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)setScannerID:(int)scannerID
-{
-    m_ScannerID = scannerID;
 
+- (void) setScannerID:(int) scannerID {
+    m_ScannerID = scannerID;
         NSMutableArray *vc = [[NSMutableArray alloc] init];
-        [vc addObject:[[self viewControllers] objectAtIndex:0]]; /* info tab */
-        [vc addObject:[[self viewControllers] objectAtIndex:1]]; /* decode tab */
-        [vc addObject:[[self viewControllers] objectAtIndex:3]]; /* settings tab tab */
+        [vc addObject: [[self viewControllers] objectAtIndex: 0]];
+        [vc addObject: [[self viewControllers] objectAtIndex: 1]];
+        [vc addObject: [[self viewControllers] objectAtIndex: 3]];
         [self setViewControllers:vc];
         [vc removeAllObjects];
         [vc release];
-    
 }
 
-- (int)getScannerID
-{
+
+- (int) getScannerID {
     return m_ScannerID;
 }
 
-- (void)showBarcode
-{
+
+- (void) showBarcode {
     [self showBarcodeList];
     [(zt_ActiveScannerBarcodeVC*)[self selectedViewController] showBarcode];
 }
 
-- (void)showBarcodeList
-{
-    /* it should be barcode view controller */
-    [self setSelectedViewController:[self.viewControllers objectAtIndex:1]];
+
+- (void) showBarcodeList {
+    [self setSelectedViewController: [self.viewControllers objectAtIndex: 1]];
 }
 
 
@@ -142,30 +132,24 @@
 //}
 
 
-- (void)showSettingsPage
-{
+- (void) showSettingsPage {
     [self setSelectedViewController:[self.viewControllers objectAtIndex:2]];
 }
 
-/* ###################################################################### */
-/* ########## IScannerAppEngineDevConnectionsDelegate Protocol implementation ## */
-/* ###################################################################### */
-- (BOOL)scannerHasAppeared:(int)scannerID
-{
-    /* should not matter */
-    return NO; /* we have not processed the notification */
+// MARK: - IScannerAppEngineDevConnectionsDelegate Protocol Implementation
+
+- (BOOL) scannerHasAppeared:(int) scannerID {
+    return NO; /// We have not processed the notification.
 }
 
-- (BOOL)scannerHasDisappeared:(int)scannerID
-{
-    if (scannerID == m_ScannerID)
-    {
+
+- (BOOL) scannerHasDisappeared:(int) scannerID {
+    if (scannerID == m_ScannerID) {
         ///Keep scanner connect UI for Virutal tether alarm mode
         if ([[ConnectionManager sharedConnectionManager] getIsOnAlarmMode]){
             return NO;
         }
-        for (UIViewController *vc in [self.navigationController viewControllers])
-        {
+        for (UIViewController *vc in [self.navigationController viewControllers]) {
             /* nrv364:
                 we should pop exactly to BTLEScanToConnectVC or MFiScannersTableVC view controller
                 it is actually for non active scanner as active scanner VC
@@ -175,12 +159,10 @@
                 stack, the available scanner VC / scan to connect VC may just pop itself
              */
             
-            if ([vc isKindOfClass:[BTLEScanToConnectVC class]] == YES)
-            {
-                if (NO == m_WillDisappear)
-                {
+            if ([vc isKindOfClass:[BTLEScanToConnectVC class]] == YES) {
+                if (NO == m_WillDisappear) {
                     m_WillDisappear = YES;
-                    [self.navigationController popToViewController:vc animated:YES];
+                    [self.navigationController popToViewController: vc animated: YES];
                 }
             }
 //            else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
@@ -192,27 +174,24 @@
 //                }
 //            }
         }
-        return YES; /* we have processed the notification */
+        return YES; /// We have processed the notification.
     }
-    return NO; /* we have not processed the notification */
+    return NO; /// We have not processed the notification.
 }
 
-- (BOOL)scannerHasConnected:(int)scannerID
-{
-    /* should not matter */
-    return NO; /* we have not processed the notification */
+
+- (BOOL) scannerHasConnected:(int) scannerID {
+    return NO; /// We have not processed the notification.
 }
 
-- (BOOL)scannerHasDisconnected:(int)scannerID
-{
-    if (scannerID == m_ScannerID)
-    {
-            ///Keep scanner connect UI for Virutal tether alarm mode
-            if ([[ConnectionManager sharedConnectionManager] getIsOnAlarmMode]){
+
+- (BOOL) scannerHasDisconnected:(int) scannerID {
+    if (scannerID == m_ScannerID) {
+            /// Keep scanner connect UI for Virutal tether alarm mode.
+            if ([[ConnectionManager sharedConnectionManager] getIsOnAlarmMode]) {
                 return NO;
             }
-            for (UIViewController *vc in [self.navigationController viewControllers])
-            {
+            for (UIViewController *vc in [self.navigationController viewControllers]) {
                 /* nrv364:
                     we should pop exactly to BTLEScanToConnectVC or MFiScannersTableVC view controller
                     it is actually for non active scanner as active scanner VC
@@ -223,13 +202,10 @@
                  */
                 /* after disconnection BTLEScanToConnectVC, MFiScannersTableVC will be shown without animation;
                  the animated poping will cause UI degradation */
-                
-                if ([vc isKindOfClass:[BTLEScanToConnectVC class]] == YES)
-                {
-                    if (NO == m_WillDisappear)
-                    {
+                if ([vc isKindOfClass:[BTLEScanToConnectVC class]] == YES) {
+                    if (NO == m_WillDisappear) {
                         m_WillDisappear = YES;
-                        [self.navigationController popToViewController:vc animated:NO];
+                        [self.navigationController popToViewController: vc animated: NO];
                     }
                 }
 //                else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
@@ -241,9 +217,9 @@
 //                    }
 //                }
             }
-        return YES; /* we have processed the notification */
+        return YES; /// We have processed the notification.
     }
-    return NO; /* we have not processed the notification */
+    return NO; /// We have not processed the notification.
 }
 
 @end

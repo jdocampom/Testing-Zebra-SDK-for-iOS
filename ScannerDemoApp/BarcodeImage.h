@@ -18,7 +18,5 @@
 #import <Foundation/Foundation.h>
 
 @interface BarcodeImage : NSObject
-
-+ (UIImage *) generateBarcodeImageUsingConfigCode : (NSString *)configurationCode withHeight:(CGFloat)imgHeight andWidth:(CGFloat)imgWidth;
-
++ (UIImage*) generateBarcodeImageUsingConfigCode: (NSString*) configurationCode withHeight:(CGFloat) imgHeight andWidth:(CGFloat) imgWidth;
 @end

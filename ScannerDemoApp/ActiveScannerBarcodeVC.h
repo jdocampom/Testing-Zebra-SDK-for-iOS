@@ -17,18 +17,15 @@
 #import "AlertView.h"
 #import <UIKit/UIKit.h>
 
-@interface zt_ActiveScannerBarcodeVC : UITableViewController
-{
+@interface zt_ActiveScannerBarcodeVC: UITableViewController {
     int m_ScannerID;
     NSMutableArray *m_BarcodeList;
     zt_AlertView *activityView;
     BOOL m_HideModeSwitch;
     BOOL m_HideReleaseTrigger;
 }
-
-- (void)showBarcode;
-- (void)performActionTriggerPull:(NSString*)param;
-- (void)performActionTriggerRelease:(NSString*)param;
-- (void)performActionBarcodeMode:(NSString*)param;
-
+- (void) showBarcode;
+- (void) performActionTriggerPull:(NSString*) param;
+- (void) performActionTriggerRelease:(NSString*) param;
+- (void) performActionBarcodeMode:(NSString*) param;
 @end
