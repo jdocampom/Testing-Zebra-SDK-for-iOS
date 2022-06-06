@@ -22,7 +22,7 @@
 #import "config.h"
 #import "BTLEScanToConnectVC.h"
 #import "SbtSdkDefs.h"
-#import "AboutAppVC.h"
+//#import "AboutAppVC.h"
 
 // This flag is used to hide the "image event" and "video event" rows in the
 // "background notifications" section of the settings table.
@@ -128,15 +128,15 @@ typedef enum
 
 /// Call the about app view controller.
 /// @param sender Send the button id as a sender.
--(IBAction)aboutAction:(id)sender
-{
-    zt_AboutAppVC *about_vc = nil;
-    about_vc = (zt_AboutAppVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_ABOUT_VC];
-    if (about_vc != nil)
-    {
-        [self.navigationController pushViewController:about_vc animated:YES];
-    }
-}
+//-(IBAction)aboutAction:(id)sender
+//{
+//    zt_AboutAppVC *about_vc = nil;
+//    about_vc = (zt_AboutAppVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_ABOUT_VC];
+//    if (about_vc != nil)
+//    {
+//        [self.navigationController pushViewController:about_vc animated:YES];
+//    }
+//}
 
 - (void)m_stDfltsSwitchToggled:(UISwitch*)switchEle
 {

@@ -18,7 +18,7 @@
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
 #import "ConnectionManager.h"
-#import "MFiScannersTableVC.h"
+//#import "MFiScannersTableVC.h"
 #import "UIColor+DarkModeExtension.h"
 #import "NSString+Contain.h"
 

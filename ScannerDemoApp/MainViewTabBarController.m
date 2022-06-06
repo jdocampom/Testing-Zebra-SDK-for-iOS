@@ -12,9 +12,9 @@
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
 #import "BTLEScanToConnectVC.h"
-#import "MFiScannersTableVC.h"
+//#import "MFiScannersTableVC.h"
 #import "AppSettingsKeys.h"
-#import "AboutAppVC.h"
+//#import "AboutAppVC.h"
 #import "ConnectionManager.h"
 
 @interface MainViewTabBarController ()
@@ -40,7 +40,8 @@
 ///Called after the controller's view is loaded into memory.
 - (void)viewDidLoad{
     [super viewDidLoad];
-    NSArray *tabbarViewControllersArray = [[[NSArray alloc] initWithObjects:[self setupBleViewController],[self setupMfiViewController],[self setupHelpViewController],[self setupSettingsViewController], nil] autorelease];
+    NSArray *tabbarViewControllersArray = [[NSArray alloc] initWithObjects: [self setupBleViewController], nil];
+//    NSArray *tabbarViewControllersArray = [[[NSArray alloc] initWithObjects:[self setupBleViewController],[self setupMfiViewController],[self setupHelpViewController],[self setupSettingsViewController], nil] autorelease];
     [self setViewControllers:tabbarViewControllersArray];
     [self setDelegate:self];
     ///Check mode if MFI only selected then set MFI as selected tab
@@ -62,33 +63,33 @@
     return bleHolderNavigation;
 }
 
-///Creating MFI Screen
--(id)setupMfiViewController{
-    UINavigationController *mfiHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
-    [mfiHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:MFI_TAB_BAR_TITLE image:[UIImage imageNamed:MFI_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_1]];
-    UIViewController *mfiViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_MFI_SCANNERS_TABLE_VC];
-    [self setDelegateForMfi:(id)mfiViewController];
-    [mfiHolderNavigation showViewController:mfiViewController sender:nil];
-    return mfiHolderNavigation;
-}
-
-///Creating Help Screen
--(id)setupHelpViewController{
-    UINavigationController *helpHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
-    [helpHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:HELP_TAB_BAR_TITLE image:[UIImage imageNamed:HELP_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_2]];
-    UIViewController *helpViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_CONNECTION_HELP_VC];
-    [helpHolderNavigation showViewController:helpViewController sender:nil];
-    return helpHolderNavigation;
-}
-
-///Creating Settings Screen
--(id)setupSettingsViewController{
-    UINavigationController *settingsHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
-    [settingsHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:SETTINGS_TAB_BAR_TITLE image:[UIImage imageNamed:SETTINGS_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_3]];
-    UIViewController *settingsViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_SETTINGS_VC];
-    [settingsHolderNavigation showViewController:settingsViewController sender:nil];
-    return settingsHolderNavigation;
-}
+/////Creating MFI Screen
+//-(id)setupMfiViewController{
+//    UINavigationController *mfiHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
+//    [mfiHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:MFI_TAB_BAR_TITLE image:[UIImage imageNamed:MFI_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_1]];
+//    UIViewController *mfiViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_MFI_SCANNERS_TABLE_VC];
+//    [self setDelegateForMfi:(id)mfiViewController];
+//    [mfiHolderNavigation showViewController:mfiViewController sender:nil];
+//    return mfiHolderNavigation;
+//}
+//
+/////Creating Help Screen
+//-(id)setupHelpViewController{
+//    UINavigationController *helpHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
+//    [helpHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:HELP_TAB_BAR_TITLE image:[UIImage imageNamed:HELP_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_2]];
+//    UIViewController *helpViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_CONNECTION_HELP_VC];
+//    [helpHolderNavigation showViewController:helpViewController sender:nil];
+//    return helpHolderNavigation;
+//}
+//
+/////Creating Settings Screen
+//-(id)setupSettingsViewController{
+//    UINavigationController *settingsHolderNavigation = [[[UINavigationControllerTheme alloc] init] autorelease];
+//    [settingsHolderNavigation setTabBarItem:[[UITabBarItem alloc] initWithTitle:SETTINGS_TAB_BAR_TITLE image:[UIImage imageNamed:SETTINGS_TAB_BAR_IMAGE] tag:TAB_BAR_TAG_3]];
+//    UIViewController *settingsViewController = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_APP_SETTINGS_VC];
+//    [settingsHolderNavigation showViewController:settingsViewController sender:nil];
+//    return settingsHolderNavigation;
+//}
 
 
 /// Asks the delegate whether the specified view controller should be made active.
@@ -144,9 +145,9 @@
     
     // Pop view when in about page
 
-    if ([currentVisibileVC isKindOfClass:[zt_AboutAppVC class]] == YES){
-        [[currentVisibileVC navigationController] popViewControllerAnimated:NO];
-    }
+//    if ([currentVisibileVC isKindOfClass:[zt_AboutAppVC class]] == YES){
+//        [[currentVisibileVC navigationController] popViewControllerAnimated:NO];
+//    }
     
     // is this view controller the active scanner vc?
     if ([currentVisibileVC isKindOfClass:[zt_ActiveScannerVC class]] == YES)
@@ -288,10 +289,10 @@
 
     // Pop view when in about page
 
-    if ([currentVisibileVC isKindOfClass:[zt_AboutAppVC class]] == YES){
-
-        [[currentVisibileVC navigationController] popViewControllerAnimated:NO];
-    }
+//    if ([currentVisibileVC isKindOfClass:[zt_AboutAppVC class]] == YES){
+//
+//        [[currentVisibileVC navigationController] popViewControllerAnimated:NO];
+//    }
     
     SbtScannerInfo *scanner_info = [[zt_ScannerAppEngine sharedAppEngine] getScannerByID:scannerID];
     

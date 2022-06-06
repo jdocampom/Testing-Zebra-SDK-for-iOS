@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		053C051E248E49CF005FA874 /* ConnectionHelpRs5100.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053C051B248E49CF005FA874 /* ConnectionHelpRs5100.xib */; };
-		053C051F248E49CF005FA874 /* ConnectionHelpRs5100View.m in Sources */ = {isa = PBXBuildFile; fileRef = 053C051C248E49CF005FA874 /* ConnectionHelpRs5100View.m */; };
 		0542E318246022BF002F2BA4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0542E317246022BF002F2BA4 /* Security.framework */; };
 		1E370A8B25887BD400CCAD87 /* NSString+Contain.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E370A8A25887BD400CCAD87 /* NSString+Contain.m */; };
 		1E924A772553F0D200B72D4D /* VirtualTetherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E924A752553F0D200B72D4D /* VirtualTetherTableViewController.m */; };
-		1EC15BCA250723B1009BE97D /* ConnectionHelpRFD8500.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC15BC9250723B1009BE97D /* ConnectionHelpRFD8500.m */; };
 		1ECC4B8B256EC7300038C85C /* libsymbolbt-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B40E0B0A1BCD9FE700556513 /* libsymbolbt-sdk.a */; };
 		1EE6DC3B2505D79D0074F11F /* UIColor+DarkModeExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE6DC3A2505D79D0074F11F /* UIColor+DarkModeExtension.m */; };
 		784488EF183E2796009F9862 /* ScannerDemoAppStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 784488ED183E2796009F9862 /* ScannerDemoAppStoryboard.storyboard */; };
@@ -33,14 +30,12 @@
 		787690E7183CBCEE0002EBFE /* scanner_launch-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787690DF183CBCEE0002EBFE /* scanner_launch-Portrait@2x.png */; };
 		787690E8183CBCEE0002EBFE /* scanner_launch-Portrait~ios7.png in Resources */ = {isa = PBXBuildFile; fileRef = 787690E0183CBCEE0002EBFE /* scanner_launch-Portrait~ios7.png */; };
 		787690E9183CBCEE0002EBFE /* scanner_launch-Portrait~ios7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 787690E1183CBCEE0002EBFE /* scanner_launch-Portrait~ios7@2x.png */; };
-		787690ED183CBF500002EBFE /* AboutAppVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 787690EC183CBF500002EBFE /* AboutAppVC.m */; };
 		787C4D96180D76C9006C736F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787C4D95180D76C9006C736F /* UIKit.framework */; };
 		787C4D98180D76C9006C736F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787C4D97180D76C9006C736F /* Foundation.framework */; };
 		787C4D9A180D76C9006C736F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787C4D99180D76C9006C736F /* CoreGraphics.framework */; };
 		787C4DA0180D76C9006C736F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 787C4D9E180D76C9006C736F /* InfoPlist.strings */; };
 		787C4DA2180D76C9006C736F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4DA1180D76C9006C736F /* main.m */; };
 		787C4DA6180D76C9006C736F /* ScannerDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4DA5180D76C9006C736F /* ScannerDemoAppDelegate.m */; };
-		787C4DBA180D7AD2006C736F /* MFiScannersTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4DB9180D7AD2006C736F /* MFiScannersTableVC.m */; };
 		787C4DC0181116D0006C736F /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4DBF181116D0006C736F /* SwitchTableViewCell.m */; };
 		787C4DC3181117E4006C736F /* SymbologiesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4DC2181117E4006C736F /* SymbologiesVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		787C4E01181822AE006C736F /* ScannerAppEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 787C4E00181822AE006C736F /* ScannerAppEngine.m */; };
@@ -146,8 +141,6 @@
 		7DFB49931DE0842800FEAA70 /* FWUpdateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB49921DE0842800FEAA70 /* FWUpdateModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7DFD987D1D16624000D0757E /* UpdateFirmwareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7DFE23F01C0576F500E2FCFE /* ScannerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFE23EF1C0576F500E2FCFE /* ScannerDetailsVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		7E91331B1F14AAA200FACF41 /* ConnectionHelpDs2278.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E91331A1F14AAA200FACF41 /* ConnectionHelpDs2278.xib */; };
-		7E91331E1F14AB1000FACF41 /* ConnectionHelpDs2278View.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E91331D1F14AB1000FACF41 /* ConnectionHelpDs2278View.m */; };
 		B42F8B2A1BCC36F6004C87AF /* BarcodeEventVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F8B291BCC36F6004C87AF /* BarcodeEventVC.m */; };
 		B44F15B11BB44A700008ADE1 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15A71BB44A700008ADE1 /* Icon-60@2x.png */; };
 		B44F15B21BB44A700008ADE1 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15A81BB44A700008ADE1 /* Icon-60@3x.png */; };
@@ -160,24 +153,10 @@
 		B44F15B91BB44A700008ADE1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15AF1BB44A700008ADE1 /* Icon-Small@2x.png */; };
 		B44F15BA1BB44A700008ADE1 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15B01BB44A700008ADE1 /* Icon-Small@3x.png */; };
 		B44F15BC1BB44DE30008ADE1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B44F15BB1BB44DE30008ADE1 /* Images.xcassets */; };
-		B452C2E31C6B9BA100C8B5FB /* ConnectionHelpLiDs3678.xib in Resources */ = {isa = PBXBuildFile; fileRef = B452C2E21C6B9BA100C8B5FB /* ConnectionHelpLiDs3678.xib */; };
 		B45E50A41BC2E95F00EB41D9 /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B45E50A11BC2E95F00EB41D9 /* ConnectionManager.m */; };
 		B467E7081BB8C99500969A1D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B467E7071BB8C99500969A1D /* QuartzCore.framework */; };
 		B48AD39B1BB47907001D9CCF /* AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B48AD3971BB47907001D9CCF /* AlertView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B48AD39C1BB47907001D9CCF /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B48AD39A1BB47907001D9CCF /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		B4B0D6291C59185100DF783A /* ConnectionHelpRfd8500.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B0D6281C59185100DF783A /* ConnectionHelpRfd8500.xib */; };
-		B4B0D62E1C59226A00DF783A /* ConnectionHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B0D62D1C59226A00DF783A /* ConnectionHelpView.m */; };
-		B4B0D6301C59439500DF783A /* ConnectionHelpSetDefaults.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B0D62F1C59439500DF783A /* ConnectionHelpSetDefaults.xib */; };
-		B4CE12F01C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CE12EF1C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.m */; };
-		B4EAE80E1D5CD53500925AAC /* ConnectionHelpDs8178.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EAE8091D5CD53500925AAC /* ConnectionHelpDs8178.m */; };
-		B4EAE80F1D5CD53500925AAC /* ConnectionHelpDs8178Btle.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EAE80A1D5CD53500925AAC /* ConnectionHelpDs8178Btle.xib */; };
-		B4EAE8101D5CD53500925AAC /* ConnectionHelpDs8178Mfi.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EAE80B1D5CD53500925AAC /* ConnectionHelpDs8178Mfi.xib */; };
-		B4EAE8111D5CD53500925AAC /* ConnectionHelpDs8178MfiView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EAE80D1D5CD53500925AAC /* ConnectionHelpDs8178MfiView.m */; };
-		B4ED8C791C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED8C781C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.m */; };
-		B4ED8C7B1C5A7EB8003F02FF /* ConnectionHelpCs4070.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ED8C7A1C5A7EB8003F02FF /* ConnectionHelpCs4070.xib */; };
-		B4ED8C7E1C5A7EF1003F02FF /* ConnectionHelpCs4070View.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ED8C7D1C5A7EF1003F02FF /* ConnectionHelpCs4070View.m */; };
-		B4F4C6881BB5927D00ED5C6F /* ConnectionHelpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C67F1BB5927D00ED5C6F /* ConnectionHelpVC.m */; };
-		B4F4C6901BB5929E00ED5C6F /* ConnectionInstructionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C68F1BB5929E00ED5C6F /* ConnectionInstructionsVC.m */; };
 		B4F4C6961BB592BF00ED5C6F /* BarcodeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4C6951BB592BF00ED5C6F /* BarcodeImage.m */; };
 		E905376F2601EA54003CC86B /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905376E2601EA54003CC86B /* UserNotifications.framework */; };
 		E911178A25F9E9D90091D632 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E911178925F9E9D90091D632 /* AudioToolbox.framework */; };
@@ -190,17 +169,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		053C051B248E49CF005FA874 /* ConnectionHelpRs5100.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpRs5100.xib; sourceTree = "<group>"; };
-		053C051C248E49CF005FA874 /* ConnectionHelpRs5100View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpRs5100View.m; sourceTree = "<group>"; };
-		053C051D248E49CF005FA874 /* ConnectionHelpRs5100View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpRs5100View.h; sourceTree = "<group>"; };
 		0542E317246022BF002F2BA4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		116AEAB2186AE57E005C9A00 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1E370A8925887BD400CCAD87 /* NSString+Contain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Contain.h"; sourceTree = "<group>"; };
 		1E370A8A25887BD400CCAD87 /* NSString+Contain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contain.m"; sourceTree = "<group>"; };
 		1E924A752553F0D200B72D4D /* VirtualTetherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualTetherTableViewController.m; sourceTree = "<group>"; };
 		1E924A762553F0D200B72D4D /* VirtualTetherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualTetherTableViewController.h; sourceTree = "<group>"; };
-		1EC15BC8250723B1009BE97D /* ConnectionHelpRFD8500.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpRFD8500.h; sourceTree = "<group>"; };
-		1EC15BC9250723B1009BE97D /* ConnectionHelpRFD8500.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpRFD8500.m; sourceTree = "<group>"; };
 		1EC15BCF2507943E009BE97D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ScannerDemoAppStoryboard.storyboard; sourceTree = "<group>"; };
 		1EE6DC392505D79D0074F11F /* UIColor+DarkModeExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+DarkModeExtension.h"; sourceTree = "<group>"; };
 		1EE6DC3A2505D79D0074F11F /* UIColor+DarkModeExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DarkModeExtension.m"; sourceTree = "<group>"; };
@@ -228,8 +202,6 @@
 		787690DF183CBCEE0002EBFE /* scanner_launch-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanner_launch-Portrait@2x.png"; sourceTree = "<group>"; };
 		787690E0183CBCEE0002EBFE /* scanner_launch-Portrait~ios7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanner_launch-Portrait~ios7.png"; sourceTree = "<group>"; };
 		787690E1183CBCEE0002EBFE /* scanner_launch-Portrait~ios7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanner_launch-Portrait~ios7@2x.png"; sourceTree = "<group>"; };
-		787690EB183CBF500002EBFE /* AboutAppVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutAppVC.h; sourceTree = "<group>"; };
-		787690EC183CBF500002EBFE /* AboutAppVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutAppVC.m; sourceTree = "<group>"; };
 		787C4D92180D76C9006C736F /* ScannerDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScannerDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787C4D95180D76C9006C736F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		787C4D97180D76C9006C736F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -240,8 +212,6 @@
 		787C4DA3180D76C9006C736F /* ScannerDemoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScannerDemoApp-Prefix.pch"; sourceTree = "<group>"; };
 		787C4DA4180D76C9006C736F /* ScannerDemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerDemoAppDelegate.h; sourceTree = "<group>"; };
 		787C4DA5180D76C9006C736F /* ScannerDemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScannerDemoAppDelegate.m; sourceTree = "<group>"; };
-		787C4DB8180D7AD2006C736F /* MFiScannersTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFiScannersTableVC.h; sourceTree = "<group>"; };
-		787C4DB9180D7AD2006C736F /* MFiScannersTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFiScannersTableVC.m; sourceTree = "<group>"; };
 		787C4DBE181116D0006C736F /* SwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTableViewCell.h; sourceTree = "<group>"; };
 		787C4DBF181116D0006C736F /* SwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableViewCell.m; sourceTree = "<group>"; };
 		787C4DC1181117E4006C736F /* SymbologiesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbologiesVC.h; sourceTree = "<group>"; };
@@ -436,9 +406,6 @@
 		7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateFirmwareVC.m; sourceTree = "<group>"; };
 		7DFE23EE1C0576F500E2FCFE /* ScannerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerDetailsVC.h; sourceTree = "<group>"; };
 		7DFE23EF1C0576F500E2FCFE /* ScannerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerDetailsVC.m; sourceTree = "<group>"; };
-		7E91331A1F14AAA200FACF41 /* ConnectionHelpDs2278.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpDs2278.xib; sourceTree = "<group>"; };
-		7E91331C1F14AB1000FACF41 /* ConnectionHelpDs2278View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpDs2278View.h; sourceTree = "<group>"; };
-		7E91331D1F14AB1000FACF41 /* ConnectionHelpDs2278View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpDs2278View.m; sourceTree = "<group>"; };
 		B40E0B0A1BCD9FE700556513 /* libsymbolbt-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsymbolbt-sdk.a"; path = "symbolbt-sdk/libsymbolbt-sdk.a"; sourceTree = "<group>"; };
 		B42F8B281BCC36F6004C87AF /* BarcodeEventVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeEventVC.h; sourceTree = "<group>"; };
 		B42F8B291BCC36F6004C87AF /* BarcodeEventVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeEventVC.m; sourceTree = "<group>"; };
@@ -453,7 +420,6 @@
 		B44F15AF1BB44A700008ADE1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
 		B44F15B01BB44A700008ADE1 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		B44F15BB1BB44DE30008ADE1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B452C2E21C6B9BA100C8B5FB /* ConnectionHelpLiDs3678.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpLiDs3678.xib; sourceTree = "<group>"; };
 		B45E50A01BC2E95F00EB41D9 /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConnectionManager.h; path = ScannerDemoApp/ConnectionManager.h; sourceTree = SOURCE_ROOT; };
 		B45E50A11BC2E95F00EB41D9 /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConnectionManager.m; path = ScannerDemoApp/ConnectionManager.m; sourceTree = SOURCE_ROOT; };
 		B467E7071BB8C99500969A1D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -461,27 +427,6 @@
 		B48AD3971BB47907001D9CCF /* AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertView.m; path = AlertProgressDialog/AlertView.m; sourceTree = "<group>"; };
 		B48AD3991BB47907001D9CCF /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = AlertProgressDialog/MBProgressHUD.h; sourceTree = "<group>"; };
 		B48AD39A1BB47907001D9CCF /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = AlertProgressDialog/MBProgressHUD.m; sourceTree = "<group>"; };
-		B4B0D6281C59185100DF783A /* ConnectionHelpRfd8500.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpRfd8500.xib; sourceTree = "<group>"; };
-		B4B0D62C1C59226A00DF783A /* ConnectionHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpView.h; sourceTree = "<group>"; };
-		B4B0D62D1C59226A00DF783A /* ConnectionHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpView.m; sourceTree = "<group>"; };
-		B4B0D62F1C59439500DF783A /* ConnectionHelpSetDefaults.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpSetDefaults.xib; sourceTree = "<group>"; };
-		B4CE12EE1C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpLiDs3678View.h; sourceTree = "<group>"; };
-		B4CE12EF1C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpLiDs3678View.m; sourceTree = "<group>"; };
-		B4EAE8081D5CD53500925AAC /* ConnectionHelpDs8178.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpDs8178.h; sourceTree = "<group>"; };
-		B4EAE8091D5CD53500925AAC /* ConnectionHelpDs8178.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpDs8178.m; sourceTree = "<group>"; };
-		B4EAE80A1D5CD53500925AAC /* ConnectionHelpDs8178Btle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpDs8178Btle.xib; sourceTree = "<group>"; };
-		B4EAE80B1D5CD53500925AAC /* ConnectionHelpDs8178Mfi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpDs8178Mfi.xib; sourceTree = "<group>"; };
-		B4EAE80C1D5CD53500925AAC /* ConnectionHelpDs8178MfiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpDs8178MfiView.h; sourceTree = "<group>"; };
-		B4EAE80D1D5CD53500925AAC /* ConnectionHelpDs8178MfiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpDs8178MfiView.m; sourceTree = "<group>"; };
-		B4ED8C771C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpSetDefaultsView.h; sourceTree = "<group>"; };
-		B4ED8C781C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpSetDefaultsView.m; sourceTree = "<group>"; };
-		B4ED8C7A1C5A7EB8003F02FF /* ConnectionHelpCs4070.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionHelpCs4070.xib; sourceTree = "<group>"; };
-		B4ED8C7C1C5A7EF1003F02FF /* ConnectionHelpCs4070View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpCs4070View.h; sourceTree = "<group>"; };
-		B4ED8C7D1C5A7EF1003F02FF /* ConnectionHelpCs4070View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpCs4070View.m; sourceTree = "<group>"; };
-		B4F4C67E1BB5927D00ED5C6F /* ConnectionHelpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelpVC.h; sourceTree = "<group>"; };
-		B4F4C67F1BB5927D00ED5C6F /* ConnectionHelpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelpVC.m; sourceTree = "<group>"; };
-		B4F4C68E1BB5929E00ED5C6F /* ConnectionInstructionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionInstructionsVC.h; sourceTree = "<group>"; };
-		B4F4C68F1BB5929E00ED5C6F /* ConnectionInstructionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionInstructionsVC.m; sourceTree = "<group>"; };
 		B4F4C6941BB592BF00ED5C6F /* BarcodeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeImage.h; sourceTree = "<group>"; };
 		B4F4C6951BB592BF00ED5C6F /* BarcodeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeImage.m; sourceTree = "<group>"; };
 		E905376B2601EA10003CC86B /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
@@ -593,7 +538,6 @@
 				7D96F0B51D22BD1900AE286C /* DownPicker */,
 				7D19BF311BF0A55E0031AF41 /* SSCheckBoxView */,
 				787C4DC418111F88006C736F /* res */,
-				B4F4C67D1BB5926500ED5C6F /* Connection Help */,
 				B48AD3951BB478F5001D9CCF /* Alert */,
 				B45E50A51BC2E96400EB41D9 /* Connection Management */,
 				B44F15BB1BB44DE30008ADE1 /* Images.xcassets */,
@@ -607,8 +551,6 @@
 				787C4DA5180D76C9006C736F /* ScannerDemoAppDelegate.m */,
 				787C4DFF181822AD006C736F /* ScannerAppEngine.h */,
 				787C4E00181822AE006C736F /* ScannerAppEngine.m */,
-				787C4DB8180D7AD2006C736F /* MFiScannersTableVC.h */,
-				787C4DB9180D7AD2006C736F /* MFiScannersTableVC.m */,
 				787C4E0518192B3A006C736F /* ActiveScannerVC.h */,
 				787C4E0618192B3A006C736F /* ActiveScannerVC.m */,
 				787C4E0818192E84006C736F /* ActiveScannerInfoVC.h */,
@@ -644,8 +586,6 @@
 				784488F7183E4DC3009F9862 /* ConfigurationSingleVC.m */,
 				78729D31182CCEBC00CDBAC5 /* BarcodeTypes.h */,
 				78729D32182CCF1700CDBAC5 /* BarcodeTypes.m */,
-				787690EB183CBF500002EBFE /* AboutAppVC.h */,
-				787690EC183CBF500002EBFE /* AboutAppVC.m */,
 				787C4DBE181116D0006C736F /* SwitchTableViewCell.h */,
 				787C4DBF181116D0006C736F /* SwitchTableViewCell.m */,
 				78DF5D3718D433C700274BDD /* BarcodeList.h */,
@@ -974,43 +914,6 @@
 			name = Alert;
 			sourceTree = "<group>";
 		};
-		B4F4C67D1BB5926500ED5C6F /* Connection Help */ = {
-			isa = PBXGroup;
-			children = (
-				053C051B248E49CF005FA874 /* ConnectionHelpRs5100.xib */,
-				053C051D248E49CF005FA874 /* ConnectionHelpRs5100View.h */,
-				053C051C248E49CF005FA874 /* ConnectionHelpRs5100View.m */,
-				B4F4C67E1BB5927D00ED5C6F /* ConnectionHelpVC.h */,
-				B4F4C67F1BB5927D00ED5C6F /* ConnectionHelpVC.m */,
-				B4F4C68E1BB5929E00ED5C6F /* ConnectionInstructionsVC.h */,
-				B4F4C68F1BB5929E00ED5C6F /* ConnectionInstructionsVC.m */,
-				B4B0D62C1C59226A00DF783A /* ConnectionHelpView.h */,
-				B4B0D62D1C59226A00DF783A /* ConnectionHelpView.m */,
-				B4ED8C771C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.h */,
-				B4ED8C781C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.m */,
-				B4ED8C7C1C5A7EF1003F02FF /* ConnectionHelpCs4070View.h */,
-				B4ED8C7D1C5A7EF1003F02FF /* ConnectionHelpCs4070View.m */,
-				B4CE12EE1C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.h */,
-				B4CE12EF1C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.m */,
-				7E91331C1F14AB1000FACF41 /* ConnectionHelpDs2278View.h */,
-				7E91331D1F14AB1000FACF41 /* ConnectionHelpDs2278View.m */,
-				B4EAE8081D5CD53500925AAC /* ConnectionHelpDs8178.h */,
-				B4EAE8091D5CD53500925AAC /* ConnectionHelpDs8178.m */,
-				B4EAE80C1D5CD53500925AAC /* ConnectionHelpDs8178MfiView.h */,
-				B4EAE80D1D5CD53500925AAC /* ConnectionHelpDs8178MfiView.m */,
-				B4EAE80A1D5CD53500925AAC /* ConnectionHelpDs8178Btle.xib */,
-				B4EAE80B1D5CD53500925AAC /* ConnectionHelpDs8178Mfi.xib */,
-				B452C2E21C6B9BA100C8B5FB /* ConnectionHelpLiDs3678.xib */,
-				7E91331A1F14AAA200FACF41 /* ConnectionHelpDs2278.xib */,
-				B4B0D6281C59185100DF783A /* ConnectionHelpRfd8500.xib */,
-				B4B0D62F1C59439500DF783A /* ConnectionHelpSetDefaults.xib */,
-				B4ED8C7A1C5A7EB8003F02FF /* ConnectionHelpCs4070.xib */,
-				1EC15BC8250723B1009BE97D /* ConnectionHelpRFD8500.h */,
-				1EC15BC9250723B1009BE97D /* ConnectionHelpRFD8500.m */,
-			);
-			name = "Connection Help";
-			sourceTree = "<group>";
-		};
 		E9DEC0EF268EE1DD000F844A /* Main View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1098,7 +1001,6 @@
 				787C4DA0180D76C9006C736F /* InfoPlist.strings in Resources */,
 				787690D0183CB7730002EBFE /* scanner_launch-568h@2x.png in Resources */,
 				78DF5D2C18BF8D7D00274BDD /* tab_image_f@2x.png in Resources */,
-				B452C2E31C6B9BA100C8B5FB /* ConnectionHelpLiDs3678.xib in Resources */,
 				787690E9183CBCEE0002EBFE /* scanner_launch-Portrait~ios7@2x.png in Resources */,
 				B44F15B81BB44A700008ADE1 /* Icon-Small.png in Resources */,
 				78DF5D2918BF8D7D00274BDD /* tab_barcode_l.png in Resources */,
@@ -1109,24 +1011,18 @@
 				B44F15B41BB44A700008ADE1 /* Icon-76@2x.png in Resources */,
 				B44F15B91BB44A700008ADE1 /* Icon-Small@2x.png in Resources */,
 				784488EF183E2796009F9862 /* ScannerDemoAppStoryboard.storyboard in Resources */,
-				B4B0D6301C59439500DF783A /* ConnectionHelpSetDefaults.xib in Resources */,
 				78DF5D3518BF8D7D00274BDD /* tab_settings_l.png in Resources */,
-				B4EAE8101D5CD53500925AAC /* ConnectionHelpDs8178Mfi.xib in Resources */,
 				78DF5D3318BF8D7D00274BDD /* tab_settings_f.png in Resources */,
 				78DF5D2D18BF8D7D00274BDD /* tab_image_l.png in Resources */,
 				78DF5CF918BF8D6700274BDD /* iTunesArtwork.png in Resources */,
 				78DF5D3218BF8D7D00274BDD /* tab_info_l@2x.png in Resources */,
-				7E91331B1F14AAA200FACF41 /* ConnectionHelpDs2278.xib in Resources */,
 				78DF5D2E18BF8D7D00274BDD /* tab_image_l@2x.png in Resources */,
 				B44F15B31BB44A700008ADE1 /* Icon-76.png in Resources */,
 				787690D5183CB7730002EBFE /* scanner_launch.png in Resources */,
 				B44F15BC1BB44DE30008ADE1 /* Images.xcassets in Resources */,
 				7D19BF531BF0A5BA0031AF41 /* cb_dark_on.png in Resources */,
-				B4B0D6291C59185100DF783A /* ConnectionHelpRfd8500.xib in Resources */,
-				B4EAE80F1D5CD53500925AAC /* ConnectionHelpDs8178Btle.xib in Resources */,
 				78DF5D2718BF8D7D00274BDD /* tab_barcode_f.png in Resources */,
 				78DF5D3418BF8D7D00274BDD /* tab_settings_f@2x.png in Resources */,
-				053C051E248E49CF005FA874 /* ConnectionHelpRs5100.xib in Resources */,
 				78DF5D2F18BF8D7D00274BDD /* tab_info_f.png in Resources */,
 				78DF5D3118BF8D7D00274BDD /* tab_info_l.png in Resources */,
 				787690E4183CBCEE0002EBFE /* scanner_launch-Landscape~ios7.png in Resources */,
@@ -1146,7 +1042,6 @@
 				78DF5D3018BF8D7D00274BDD /* tab_info_f@2x.png in Resources */,
 				B44F15B21BB44A700008ADE1 /* Icon-60@3x.png in Resources */,
 				78DF5D3618BF8D7D00274BDD /* tab_settings_l@2x.png in Resources */,
-				B4ED8C7B1C5A7EB8003F02FF /* ConnectionHelpCs4070.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,24 +1054,19 @@
 			files = (
 				787C4DA2180D76C9006C736F /* main.m in Sources */,
 				787C4DA6180D76C9006C736F /* ScannerDemoAppDelegate.m in Sources */,
-				B4ED8C791C5A79DB003F02FF /* ConnectionHelpSetDefaultsView.m in Sources */,
 				78DF5D3918D433C700274BDD /* BarcodeList.m in Sources */,
 				78DF5C6D189696B700274BDD /* BeeperActionVC.m in Sources */,
 				7D45BB441DE1E91F00B66462 /* ZZNewArchiveEntry.mm in Sources */,
 				7D61570A1BD4A31A009E5D12 /* AssetDetailsVC.m in Sources */,
-				B4B0D62E1C59226A00DF783A /* ConnectionHelpView.m in Sources */,
 				784488FB183E509A009F9862 /* ScannerConfiguration.m in Sources */,
-				787C4DBA180D7AD2006C736F /* MFiScannersTableVC.m in Sources */,
 				7D45BB281DE1E91F00B66462 /* DGActivityIndicatorDoubleBounceAnimation.m in Sources */,
 				B48AD39C1BB47907001D9CCF /* MBProgressHUD.m in Sources */,
 				7D45BB4A1DE1E91F00B66462 /* ZZStoreOutputStream.m in Sources */,
 				7D45BB321DE1E91F00B66462 /* DGActivityIndicatorThreeDotsAnimation.m in Sources */,
 				7D45BB1E1DE1E91F00B66462 /* DGActivityIndicatorBallPulseSyncAnimation.m in Sources */,
-				053C051F248E49CF005FA874 /* ConnectionHelpRs5100View.m in Sources */,
 				7D45BB3B1DE1E91F00B66462 /* ZZArchiveEntry.m in Sources */,
 				7D45BB401DE1E91F00B66462 /* ZZError.m in Sources */,
 				7D45BB2C1DE1E91F00B66462 /* DGActivityIndicatorLineScalePulseOutAnimation.m in Sources */,
-				B4F4C6881BB5927D00ED5C6F /* ConnectionHelpVC.m in Sources */,
 				E9DEC0F5268EE295000F844A /* MainViewTabBarController.m in Sources */,
 				7D45BB2D1DE1E91F00B66462 /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */,
 				B42F8B2A1BCC36F6004C87AF /* BarcodeEventVC.m in Sources */,
@@ -1186,7 +1076,6 @@
 				7D45BB411DE1E91F00B66462 /* ZZFileChannel.m in Sources */,
 				7D45BB3D1DE1E91F00B66462 /* ZZDataChannel.m in Sources */,
 				7D45BB2F1DE1E91F00B66462 /* DGActivityIndicatorRotatingSandglassAnimation.m in Sources */,
-				787690ED183CBF500002EBFE /* AboutAppVC.m in Sources */,
 				7D45BB2E1DE1E91F00B66462 /* DGActivityIndicatorNineDotsAnimation.m in Sources */,
 				787C4DC0181116D0006C736F /* SwitchTableViewCell.m in Sources */,
 				7D45BB3A1DE1E91F00B66462 /* ZZArchive.mm in Sources */,
@@ -1199,8 +1088,6 @@
 				7D45BB421DE1E91F00B66462 /* ZZFileChannelOutput.m in Sources */,
 				7DFD987D1D16624000D0757E /* UpdateFirmwareVC.m in Sources */,
 				7DFA20CA1D1EBDCB0087C3B1 /* BTLEScanToConnectVC.m in Sources */,
-				B4EAE80E1D5CD53500925AAC /* ConnectionHelpDs8178.m in Sources */,
-				B4CE12F01C5ABCDA00611A7E /* ConnectionHelpLiDs3678View.m in Sources */,
 				787C4E01181822AE006C736F /* ScannerAppEngine.m in Sources */,
 				7D45BB2B1DE1E91F00B66462 /* DGActivityIndicatorLineScalePartyAnimation.m in Sources */,
 				7D45BB431DE1E91F00B66462 /* ZZInflateInputStream.m in Sources */,
@@ -1231,25 +1118,20 @@
 				7D61C29A1D2A5A3600D59AD0 /* FWFileCellTableViewCell.m in Sources */,
 				7D45BB451DE1E91F00B66462 /* ZZNewArchiveEntryWriter.mm in Sources */,
 				7D45BB271DE1E91F00B66462 /* DGActivityIndicatorCookieTerminatorAnimation.m in Sources */,
-				B4F4C6901BB5929E00ED5C6F /* ConnectionInstructionsVC.m in Sources */,
-				B4EAE8111D5CD53500925AAC /* ConnectionHelpDs8178MfiView.m in Sources */,
 				7D45BB301DE1E91F00B66462 /* DGActivityIndicatorRotatingSquaresAnimation.m in Sources */,
 				B45E50A41BC2E95F00EB41D9 /* ConnectionManager.m in Sources */,
 				78DF5C5D1888117C00274BDD /* Symbology.m in Sources */,
 				7D45BB1F1DE1E91F00B66462 /* DGActivityIndicatorBallRotateAnimation.m in Sources */,
 				7D61570E1BD4B901009E5D12 /* SbtScannerInfo+AssetsTblRepresentation.m in Sources */,
-				1EC15BCA250723B1009BE97D /* ConnectionHelpRFD8500.m in Sources */,
 				787C4E0D181936E5006C736F /* ActiveScannerBarcodeVC.m in Sources */,
 				7DFA21BD1D20F57A0087C3B1 /* BarcodeGen128.m in Sources */,
 				7D45BB341DE1E91F00B66462 /* DGActivityIndicatorTriplePulseAnimation.m in Sources */,
 				7D45BB491DE1E91F00B66462 /* ZZStandardDecryptInputStream.mm in Sources */,
 				1EE6DC3B2505D79D0074F11F /* UIColor+DarkModeExtension.m in Sources */,
-				7E91331E1F14AB1000FACF41 /* ConnectionHelpDs2278View.m in Sources */,
 				78DF5C64189138A000274BDD /* BeeperSettingsVC.m in Sources */,
 				78729D1D181AB6FE00CDBAC5 /* AppSettingsVC.m in Sources */,
 				7D45BB1A1DE1E91F00B66462 /* DGActivityIndicatorBallClipRotatePulseAnimation.m in Sources */,
 				7D45BB1C1DE1E91F00B66462 /* DGActivityIndicatorBallGridPulseAnimation.m in Sources */,
-				B4ED8C7E1C5A7EF1003F02FF /* ConnectionHelpCs4070View.m in Sources */,
 				7D45BB201DE1E91F00B66462 /* DGActivityIndicatorBallScaleAnimation.m in Sources */,
 				78729D2F182CCAC200CDBAC5 /* ActiveScannerSettingsVC.m in Sources */,
 				7D96F0BB1D22BD2C00AE286C /* UIDownPicker.m in Sources */,

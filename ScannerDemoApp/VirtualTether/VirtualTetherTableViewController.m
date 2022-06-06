@@ -12,7 +12,7 @@
 #import "ScannerAppEngine.h"
 #import "UIColor+DarkModeExtension.h"
 #import "AppSettingsKeys.h"
-#import "MFiScannersTableVC.h"
+//#import "MFiScannersTableVC.h"
 #import "BTLEScanToConnectVC.h"
 
 @interface VirtualTetherTableViewController()
@@ -122,10 +122,10 @@
             NSArray *viewControllerArray = [[self navigationController] viewControllers];
             for( int index=0;index<[viewControllerArray count];index++){
                 id stackViewController = [viewControllerArray objectAtIndex:index];
-                if([stackViewController isKindOfClass:[MFiScannersTableVC class]]){
-                    [[self navigationController] popToViewController:stackViewController animated:NO];
-                    return;
-                }
+//                if([stackViewController isKindOfClass:[MFiScannersTableVC class]]){
+//                    [[self navigationController] popToViewController:stackViewController animated:NO];
+//                    return;
+//                }
                 if([stackViewController isKindOfClass:[BTLEScanToConnectVC class]]){
                     [[self navigationController] popToViewController:stackViewController animated:NO];
                     return;
@@ -796,10 +796,11 @@
     for( int index=0;index<[viewControllerArray count];index++){
         id stackViewController=[viewControllerArray objectAtIndex:index];
         NSUInteger valueToCheckIfExitWithoutScannerTableVC = viewControllerArray.count - VIRTUAL_TETHER_CHECK_LAST_VC;
-        if([stackViewController isKindOfClass:[MFiScannersTableVC class]]){
-            [[self navigationController] popToViewController:stackViewController animated:NO];
-            return;
-        }else if([stackViewController isKindOfClass:[BTLEScanToConnectVC class]]){
+//        if([stackViewController isKindOfClass:[MFiScannersTableVC class]]){
+//            [[self navigationController] popToViewController:stackViewController animated:NO];
+//            return;
+//        }else
+        if([stackViewController isKindOfClass:[BTLEScanToConnectVC class]]){
             [[self navigationController] popToViewController:stackViewController animated:NO];
             return;
         }else if (valueToCheckIfExitWithoutScannerTableVC == index) {

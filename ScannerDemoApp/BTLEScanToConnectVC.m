@@ -22,7 +22,7 @@
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
 #import "ConnectionManager.h"
-#import "AboutAppVC.h"
+//#import "AboutAppVC.h"
 #import "VirtualTetherTableViewController.h"
 #import "AppSettingsKeys.h"
 
@@ -52,8 +52,8 @@
 - (void) viewDidLoad {
 	[super viewDidLoad];
 	[[self navigationItem] setTitle: SCAN_TO_CONNECT_APP_NAME_TITLE];
-	UIBarButtonItem *aboutusButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: ABOUTUS_IMAGE] style: UIBarButtonItemStylePlain target: self action: @selector(aboutAction:)];
-	[[self navigationItem] setRightBarButtonItem: aboutusButton];
+//	UIBarButtonItem *aboutusButton = [[UIBarButtonItem alloc] initWithImage: [UIImage imageNamed: ABOUTUS_IMAGE] style: UIBarButtonItemStylePlain target: self action: @selector(aboutAction:)];
+//	[[self navigationItem] setRightBarButtonItem: aboutusButton];
 }
 
 
@@ -80,13 +80,13 @@
 
 /// Call the about app view controller.
 /// @param sender Send the button id as a sender.
-- (IBAction) aboutAction:(id) sender {
-	zt_AboutAppVC *about_vc = nil;
-	about_vc = (zt_AboutAppVC*)[[UIStoryboard storyboardWithName: SCANNER_STORY_BOARD bundle: [NSBundle mainBundle]] instantiateViewControllerWithIdentifier: ID_APP_ABOUT_VC];
-	if (about_vc != nil) {
-		[self.navigationController pushViewController: about_vc animated: YES];
-	}
-}
+//- (IBAction) aboutAction:(id) sender {
+//	zt_AboutAppVC *about_vc = nil;
+//	about_vc = (zt_AboutAppVC*)[[UIStoryboard storyboardWithName: SCANNER_STORY_BOARD bundle: [NSBundle mainBundle]] instantiateViewControllerWithIdentifier: ID_APP_ABOUT_VC];
+//	if (about_vc != nil) {
+//		[self.navigationController pushViewController: about_vc animated: YES];
+//	}
+//}
 
 
 /// Notifies the view controller that its view is about to be added to a view hierarchy.

@@ -17,11 +17,11 @@
 #import "ActiveScannerVC.h"
 #import "ActiveScannerBarcodeVC.h"
 #import "config.h"
-#import "MFiScannersTableVC.h"
+//#import "MFiScannersTableVC.h"
 #import "AppSettingsKeys.h"
 #import "ConnectionManager.h"
 #import "BTLEScanToConnectVC.h"
-#import "MFiScannersTableVC.h"
+//#import "MFiScannersTableVC.h"
 
 @interface zt_ActiveScannerVC ()
 
@@ -182,14 +182,15 @@
                     m_WillDisappear = YES;
                     [self.navigationController popToViewController:vc animated:YES];
                 }
-            } else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
-            {
-                if (NO == m_WillDisappear)
-                {
-                    m_WillDisappear = YES;
-                    [self.navigationController popToViewController:vc animated:YES];
-                }
             }
+//            else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
+//            {
+//                if (NO == m_WillDisappear)
+//                {
+//                    m_WillDisappear = YES;
+//                    [self.navigationController popToViewController:vc animated:YES];
+//                }
+//            }
         }
         return YES; /* we have processed the notification */
     }
@@ -230,14 +231,15 @@
                         m_WillDisappear = YES;
                         [self.navigationController popToViewController:vc animated:NO];
                     }
-                } else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
-                {
-                    if (NO == m_WillDisappear)
-                    {
-                        m_WillDisappear = YES;
-                        [self.navigationController popToViewController:vc animated:NO];
-                    }
                 }
+//                else if([vc isKindOfClass:[MFiScannersTableVC class]] == YES)
+//                {
+//                    if (NO == m_WillDisappear)
+//                    {
+//                        m_WillDisappear = YES;
+//                        [self.navigationController popToViewController:vc animated:NO];
+//                    }
+//                }
             }
         return YES; /* we have processed the notification */
     }
