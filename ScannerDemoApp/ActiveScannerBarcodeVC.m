@@ -15,7 +15,7 @@
  ******************************************************************************/
 
 #import "ActiveScannerBarcodeVC.h"
-#import "BarcodeEventVC.h"
+//#import "BarcodeEventVC.h"
 #import "BarcodeTypes.h"
 #import "config.h"
 #import "ScannerAppEngine.h"
@@ -399,19 +399,19 @@ static NSString *const kTitleBarcodeMode = @"Switch to barcode mode";
     }
     else if (1 == [indexPath section]) /* barcode list section */
     {
-        if ([m_BarcodeList count] > 0)
-        {
-            zt_BarcodeEventVC *barcode_vc = (zt_BarcodeEventVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_BARCODE_EVENT_VC];
-            
-            if (barcode_vc != nil)
-            {
-                zt_BarcodeData *decode_event = (zt_BarcodeData*)[m_BarcodeList objectAtIndex:([m_BarcodeList count] - 1 - [indexPath row])];
-                [barcode_vc configureAsChild];
-                [barcode_vc setBarcodeEventData:decode_event fromScanner:m_ScannerID];
-                [self.navigationController pushViewController:barcode_vc animated:YES];
-                /* barcode_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
-            }
-        }
+//        if ([m_BarcodeList count] > 0)
+//        {
+//            zt_BarcodeEventVC *barcode_vc = (zt_BarcodeEventVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_BARCODE_EVENT_VC];
+//
+//            if (barcode_vc != nil)
+//            {
+//                zt_BarcodeData *decode_event = (zt_BarcodeData*)[m_BarcodeList objectAtIndex:([m_BarcodeList count] - 1 - [indexPath row])];
+//                [barcode_vc configureAsChild];
+//                [barcode_vc setBarcodeEventData:decode_event fromScanner:m_ScannerID];
+//                [self.navigationController pushViewController:barcode_vc animated:YES];
+//                /* barcode_vc is autoreleased object returned by instantiateViewControllerWithIdentifier */
+//            }
+//        }
     }
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
