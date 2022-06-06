@@ -25,7 +25,6 @@
 #import "NSString+Contain.h"
 
 @interface zt_ActiveScannerBarcodeVC ()
-
 @end
 
 @implementation zt_ActiveScannerBarcodeVC
@@ -34,12 +33,9 @@ static NSString *const kTitlePullTrigger = @"Pull Trigger";
 static NSString *const kTitleReleaseTrigger = @"Release Trigger";
 static NSString *const kTitleBarcodeMode = @"Switch to barcode mode";
 
-/* default cstr for storyboard */
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self != nil)
-    {
+- (id) initWithCoder:(NSCoder*) aDecoder {
+    self = [super initWithCoder: aDecoder];
+    if (self != nil) {
         m_ScannerID = -1;
         m_HideModeSwitch = NO;
         m_HideReleaseTrigger = NO;
@@ -49,186 +45,127 @@ static NSString *const kTitleBarcodeMode = @"Switch to barcode mode";
     return self;
 }
 
-- (void)dealloc
-{
-    if (m_BarcodeList != nil)
-    {
+
+- (void) dealloc {
+    if (m_BarcodeList != nil) {
         [m_BarcodeList removeAllObjects];
         [m_BarcodeList release];
     }
-    
-    if (activityView != nil)
-    {
+    if (activityView != nil) {
         [activityView release];
     }
-
     [super dealloc];
 }
 
-- (void)viewDidLoad
-{
+
+- (void) viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.e];
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
+
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear: animated];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if (m_ScannerID == -1)
-    {
+- (void) viewDidAppear:(BOOL) animated {
+    [super viewDidAppear: animated];
+    if (m_ScannerID == -1) {
         m_ScannerID = [(zt_ActiveScannerVC*)self.tabBarController getScannerID];
-        
         SbtScannerInfo *scanner_info = [[zt_ScannerAppEngine sharedAppEngine] getScannerByID:m_ScannerID];
-        
-        /* Hide the unsupported mode switch scanners that do not support it */
-  
+        /// Hide the unsupported mode switch scanners that do not support it.
         m_HideModeSwitch = YES;
-        
-        
-        /* Hide the unsupported release trigger button for scanners that do not support it */
-        if ([[scanner_info getScannerName]containsSubString:SST_SCANNER_MODEL_SSI_CS4070])
-        {
+        /// Hide the unsupported release trigger button for scanners that do not support it.
+        if ([[scanner_info getScannerName]containsSubString: SST_SCANNER_MODEL_SSI_CS4070]) {
             m_HideReleaseTrigger = YES;
-        }else{
+        } else {
             m_HideModeSwitch = YES;
         }
-        
     }
-    
     [self showBarcode];
-    
 }
 
-- (void)showBarcode
-{
+- (void) showBarcode {
     NSArray *tmp_barcode_lst = [[zt_ScannerAppEngine sharedAppEngine] getScannerBarcodesByID:m_ScannerID];
     [m_BarcodeList removeAllObjects];
-    [m_BarcodeList addObjectsFromArray:tmp_barcode_lst];
-    
+    [m_BarcodeList addObjectsFromArray: tmp_barcode_lst];
     UITableView *tb = [self tableView];
-    if (tb != nil)
-    {
-        /* show updated barcode list for this scanner */
+    if (tb != nil) {
+        /// Show updated barcode list for this scanner.
         [tb reloadData];
-        
-        /* scroll to top to show most recent barcode */
-        [tb scrollRectToVisible:CGRectMake(SCROLL_REACT_TO_VISIBILE_X_ZERO, SCROLL_REACT_TO_VISIBILE_Y_ZERO, SCROLL_REACT_TO_VISIBILE_WIDTH_ONE, SCROLL_REACT_TO_VISIBILE_HEIGHT_ONE) animated:YES];
+        /// Scroll to top to show most recent barcode.
+        [tb scrollRectToVisible: CGRectMake(SCROLL_REACT_TO_VISIBILE_X_ZERO, SCROLL_REACT_TO_VISIBILE_Y_ZERO, SCROLL_REACT_TO_VISIBILE_WIDTH_ONE, SCROLL_REACT_TO_VISIBILE_HEIGHT_ONE) animated: YES];
     }
 }
 
-- (void)performActionTriggerPull:(NSString*)param
-{
-    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand:SBT_DEVICE_PULL_TRIGGER aInXML:param aOutXML:nil forScanner:m_ScannerID];
-    
-    if (res != SBT_RESULT_SUCCESS)
-    {
-        dispatch_async(dispatch_get_main_queue(),
-                       ^{
-            UIAlertController * alert = [UIAlertController
-                            alertControllerWithTitle:ZT_SCANNER_APP_NAME
-                                             message:ZT_SCANNER_CANNOT_PERFORM_TRIGGER_PULL
-                                      preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* okButton = [UIAlertAction
-                                actionWithTitle:OK
-                                          style:UIAlertActionStyleDefault
-                                        handler:^(UIAlertAction * action) {
-                                            //Handle ok action
-                                        }];
+
+- (void) performActionTriggerPull:(NSString*) param {
+    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand: SBT_DEVICE_PULL_TRIGGER aInXML: param aOutXML: nil forScanner: m_ScannerID];
+    if (res != SBT_RESULT_SUCCESS) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle: ZT_SCANNER_APP_NAME message: ZT_SCANNER_CANNOT_PERFORM_TRIGGER_PULL preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertAction* okButton = [UIAlertAction actionWithTitle: OK style: UIAlertActionStyleDefault handler: ^(UIAlertAction * action) {
+                /// Handle OK action.
+            }];
             [alert addAction:okButton];
             [self presentViewController:alert animated:YES completion:nil];
             [alert release];
-                       }
-                       );
+        });
     }
 }
-- (void)performActionTriggerRelease:(NSString*)param
-{
-    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand:SBT_DEVICE_RELEASE_TRIGGER aInXML:param aOutXML:nil forScanner:m_ScannerID];
-    
-    if (res != SBT_RESULT_SUCCESS)
-    {
-        dispatch_async(dispatch_get_main_queue(),
-                       ^{
-            UIAlertController * alert = [UIAlertController
-                            alertControllerWithTitle:ZT_SCANNER_APP_NAME
-                                             message:ZT_SCANNER_CANNOT_PERFORM_TRIGGER_RELEASE
-                                      preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* okButton = [UIAlertAction
-                                actionWithTitle:OK
-                                          style:UIAlertActionStyleDefault
-                                        handler:^(UIAlertAction * action) {
-                                            //Handle ok action
-                                        }];
-            [alert addAction:okButton];
-            [self presentViewController:alert animated:YES completion:nil];
+
+
+- (void) performActionTriggerRelease:(NSString*) param {
+    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand:SBT_DEVICE_RELEASE_TRIGGER aInXML: param aOutXML: nil forScanner: m_ScannerID];
+    if (res != SBT_RESULT_SUCCESS) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle: ZT_SCANNER_APP_NAME message: ZT_SCANNER_CANNOT_PERFORM_TRIGGER_RELEASE preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertAction* okButton = [UIAlertAction actionWithTitle: OK style: UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                /// Handle OK action.
+            }];
+            [alert addAction: okButton];
+            [self presentViewController: alert animated: YES completion: nil];
             [alert release];
-                       }
-                       );
+        });
     }
 }
 
-- (void)performActionBarcodeMode:(NSString*)param
-{
-    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand:SBT_DEVICE_CAPTURE_BARCODE aInXML:param aOutXML:nil forScanner:m_ScannerID];
-    
-    if (res != SBT_RESULT_SUCCESS)
-    {
-        dispatch_async(dispatch_get_main_queue(),
-                       ^{
-            UIAlertController * alert = [UIAlertController
-                            alertControllerWithTitle:ZT_SCANNER_APP_NAME
-                                             message:ZT_SCANNER_CANNOT_PERFORM_SCANNER_MODE
-                                      preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* okButton = [UIAlertAction
-                                actionWithTitle:OK
-                                          style:UIAlertActionStyleDefault
-                                        handler:^(UIAlertAction * action) {
-                                            //Handle ok action
-                                        }];
-            [alert addAction:okButton];
-            [self presentViewController:alert animated:YES completion:nil];
+
+- (void) performActionBarcodeMode:(NSString*) param {
+    SBT_RESULT res = [[zt_ScannerAppEngine sharedAppEngine] executeCommand:SBT_DEVICE_CAPTURE_BARCODE aInXML: param aOutXML: nil forScanner: m_ScannerID];
+    if (res != SBT_RESULT_SUCCESS) {
+        dispatch_async(dispatch_get_main_queue(),  ^{
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle: ZT_SCANNER_APP_NAME message: ZT_SCANNER_CANNOT_PERFORM_SCANNER_MODE preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertAction* okButton = [UIAlertAction actionWithTitle: OK style: UIAlertActionStyleDefault handler: ^(UIAlertAction * action) {
+                /// Handle OK action.
+            }];
+            [alert addAction: okButton];
+            [self presentViewController: alert animated: YES completion: nil];
             [alert release];
-                       }
-                       );
+        });
     }
 }
 
-#pragma mark - Table view data source
-/* ###################################################################### */
-/* ########## Table View Data Source Delegate Protocol implementation ### */
-/* ###################################################################### */
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
+// MARK: - TableView Data Source
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView*) tableView {
     return 2;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    switch (section)
-    {
+
+- (NSInteger) tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger) section {
+    switch (section) {
         case 0:
             return 3 - (YES == m_HideModeSwitch ? 1 : 0) - (YES == m_HideReleaseTrigger ? 1 : 0);
         case 1:
-            if ([m_BarcodeList count] > 0)
-            {
+            if ([m_BarcodeList count] > 0) {
                 return [m_BarcodeList count];
-            }
-            else
-            {
+            } else {
                 return 1;
             }
         default:
@@ -236,31 +173,26 @@ static NSString *const kTitleBarcodeMode = @"Switch to barcode mode";
     }
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (0 == section)
-    {
+
+- (NSString*) tableView:(UITableView*) tableView titleForHeaderInSection:(NSInteger) section {
+    if (0 == section) {
         return @"Actions";
-    }
-    else if (1 == section)
-    {
-        return [NSString stringWithFormat:@"Barcode List: Count = %d",(unsigned int)[m_BarcodeList count]];
+    } else if (1 == section) {
+        return [NSString stringWithFormat: @"Barcode List: Count = %d", (unsigned int)[m_BarcodeList count]];
     }
     return @"Unknown";
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-{
-    /* Add custom section header for the Barcode list section in the table */
-    if (1 == section)
-    {
-        /* Specify component sizes */
+
+- (UIView*) tableView:(UITableView*) tableView viewForHeaderInSection:(NSInteger) section {
+    /// Add custom section header for the Barcode list section in the table.
+    if (1 == section) {
+        /// Specify component sizes...
         CGFloat headerWidth = self.tableView.frame.size.width;
         CGFloat headerHeight = 20.0f;
         CGFloat btnWidth = 60.0f;
         CGFloat btnHeight = 30.0f;
-        
-        /* Create custom view for section header */
+        /// Create custom view for section header.
         UITableViewHeaderFooterView *customHeaderView = [[[UITableViewHeaderFooterView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, headerWidth, headerHeight)] autorelease];
         
         /* Create clear button */

@@ -15,11 +15,9 @@
  ******************************************************************************/
 
 #import <UIKit/UIKit.h>
-
 #import "ScannerDemoAppDelegate.h"
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([zt_ScannerDemoAppDelegate class]));
     }

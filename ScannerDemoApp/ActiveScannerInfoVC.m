@@ -24,8 +24,7 @@
 #import "AssetDetailsVC.h"
 #import "NSString+Contain.h"
 
-typedef enum
-{
+typedef enum {
     SECTION_ACTIONS = 0,
     SECTION_INFORMATION,
     SECTION_DISCONNECT,
@@ -33,75 +32,62 @@ typedef enum
 } InfoSection;
 
 @interface zt_ActiveScannerInfoVC ()
-
 @end
 
 @implementation zt_ActiveScannerInfoVC
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
+- (id) initWithCoder:(NSCoder*) aDecoder {
     self = [super initWithCoder:aDecoder];
-    if (self != nil)
-    {
+    if (self != nil) {
         m_IsBusy = NO;
     }
     return self;
 }
 
-- (void)dealloc
-{
-    [self.tableView setDataSource:nil];
-    [self.tableView setDelegate:nil];
+
+- (void) dealloc {
+    [self.tableView setDataSource: nil];
+    [self.tableView setDelegate: nil];
     [m_lblScannerName release];
-    
-    if (activityView != nil)
-    {
+    if (activityView != nil) {
         [activityView release];
     }
-
     [super dealloc];
 }
 
-- (void)viewDidLoad
-{
+
+- (void) viewDidLoad {
     [super viewDidLoad];
-    
-    activityView = [[zt_AlertView alloc]init];
-    
-    // Initialize the connection manager
+    activityView = [[zt_AlertView alloc] init];
+    /// Initialize the connection manager
     [ConnectionManager sharedConnectionManager];
 
 }
 
-//Sent to the view controller when the app receives a memory warning.
-- (void)didReceiveMemoryWarning
-{
+
+/// Sent to the view controller when the app receives a memory warning.
+- (void) didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-
+- (void) viewWillAppear:(BOOL) animated {
+    [super viewWillAppear: animated];
     [self updateUI];
 }
 
-- (void)updateUI
-{
-    if ([self.tabBarController isKindOfClass:[zt_ActiveScannerVC class]] == YES)
-    {
+
+- (void) updateUI {
+    if ([self.tabBarController isKindOfClass: [zt_ActiveScannerVC class]] == YES) {
         int scanner_id = [(zt_ActiveScannerVC*)self.tabBarController getScannerID];
         SbtScannerInfo *scanner_info = [[zt_ScannerAppEngine sharedAppEngine] getScannerByID:scanner_id];
-        if (scanner_info != nil)
-        {
-            switch ([scanner_info getConnectionType])
-            {
-                case SBT_CONNTYPE_MFI:
-                    [m_lblScannerName setText:[NSString stringWithFormat:@"%@", [scanner_info getScannerName]]];
-                    break;
+        if (scanner_info != nil) {
+            switch ([scanner_info getConnectionType]) {
+//                case SBT_CONNTYPE_MFI:
+//                    [m_lblScannerName setText: [NSString stringWithFormat: @"%@", [scanner_info getScannerName]]];
+//                    break;
                 case SBT_CONNTYPE_BTLE:
-                    [m_lblScannerName setText:[NSString stringWithFormat:@"%@", [scanner_info getScannerName]]];
+                    [m_lblScannerName setText: [NSString stringWithFormat: @"%@", [scanner_info getScannerName]]];
                     break;
             }
             return;
@@ -109,33 +95,26 @@ typedef enum
     }
 }
 
-- (void)terminateCommunicationSession
-{
+
+- (void) terminateCommunicationSession {
     dispatch_async(dispatch_get_main_queue(), ^{
-        if ([self.tabBarController isKindOfClass:[zt_ActiveScannerVC class]] == YES)
-        {
+        if ([self.tabBarController isKindOfClass:[zt_ActiveScannerVC class]] == YES) {
             [[ConnectionManager sharedConnectionManager] disconnect];
         }
-
         m_IsBusy = NO;
     });
 }
 
-#pragma mark - Table view data source
-/* ###################################################################### */
-/* ########## Table View Data Source Delegate Protocol implementation ### */
-/* ###################################################################### */
+// MARK:  - TableView Data Source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
+- (NSInteger) numberOfSectionsInTableView:(UITableView*) tableView {
+    /// Return the number of sections.
     return SECTION_TOTAL;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    switch (section)
-    {
+
+- (NSInteger) tableView:(UITableView*) tableView numberOfRowsInSection:(NSInteger) section {
+    switch (section) {
         case SECTION_DISCONNECT:
             return 1;
         case SECTION_INFORMATION:
@@ -147,14 +126,10 @@ typedef enum
     }
 }
 
-#pragma mark - Table view delegate
-/* ###################################################################### */
-/* ########## Table View Delegate Protocol implementation ############### */
-/* ###################################################################### */
+// MARK:  - TableView Delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
+- (void) tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath {
+    /// Navigation logic may go here. Create and push another view controller.
 //    if ([indexPath section] == SECTION_ACTIONS) /* actions section */
 //    {
 //        if ([indexPath row] == 0) /* Beeper */
@@ -181,56 +156,37 @@ typedef enum
 //        }
 //    }
     
-    if (([indexPath section] == SECTION_DISCONNECT) && ([indexPath row] == 0)) /* Disconnect button */
-    {
-        if (NO == m_IsBusy)
-        {
-            
-            UIAlertController * alert = [UIAlertController
-                                        alertControllerWithTitle:ACTIVE_SCANNER_DISCONNECT_ALERT_TITLE
-                                                         message:ZT_SCANNER_DISCONNECT_SCANNER_FROM_APPLICATION_MESSAGE
-                                                  preferredStyle:UIAlertControllerStyleAlert];
-                        UIAlertAction* yesButton = [UIAlertAction
-                                            actionWithTitle:ACTIVE_SCANNER_BARCODE_ALERT_CANCEL
-                                                      style:UIAlertActionStyleDefault
-                                                    handler:^(UIAlertAction * action) {
-                                                        //Handle your yes please button action here
-                                                    }];
-                        UIAlertAction* noButton = [UIAlertAction
-                                                actionWithTitle:ACTIVE_SCANNER_BARCODE_ALERT_CONTINUE
-                                                          style:UIAlertActionStyleDefault
-                                                        handler:^(UIAlertAction * action) {
-                            m_IsBusy = YES;
-                            ///Disable all virtual tether options on new scanner disconnect
-                            [[ConnectionManager sharedConnectionManager] resetAllVirtualTetherHostAlarmSetting];
-                            [activityView showAlertWithView:self.view withTarget:self withMethod:@selector(terminateCommunicationSession) withObject:nil withString:ZT_SCANNER_DISCONNECTING_MESSAGE];
-                                                        }];
-
-                        [alert addAction:yesButton];
-                        [alert addAction:noButton];
-                        [self presentViewController:alert animated:YES completion:nil];
-                        [alert release];
+    if (([indexPath section] == SECTION_DISCONNECT) && ([indexPath row] == 0)) {
+        if (NO == m_IsBusy) {
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle: ACTIVE_SCANNER_DISCONNECT_ALERT_TITLE message: ZT_SCANNER_DISCONNECT_SCANNER_FROM_APPLICATION_MESSAGE preferredStyle: UIAlertControllerStyleAlert];
+            UIAlertAction* yesButton = [UIAlertAction actionWithTitle: ACTIVE_SCANNER_BARCODE_ALERT_CANCEL style: UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                /// Handle your yes please button action here
+            }];
+            UIAlertAction* noButton = [UIAlertAction actionWithTitle: ACTIVE_SCANNER_BARCODE_ALERT_CONTINUE style: UIAlertActionStyleDefault handler: ^(UIAlertAction * action) {
+                m_IsBusy = YES;
+                /// Disable all virtual tether options on new scanner disconnect
+                [[ConnectionManager sharedConnectionManager] resetAllVirtualTetherHostAlarmSetting];
+                [activityView showAlertWithView: self.view withTarget: self withMethod: @selector(terminateCommunicationSession) withObject: nil withString: ZT_SCANNER_DISCONNECTING_MESSAGE];
+            }];
+            [alert addAction: yesButton];
+            [alert addAction: noButton];
+            [self presentViewController: alert animated: YES completion: nil];
+            [alert release];
         }
     }
-    
     if ([indexPath section] == SECTION_INFORMATION && [indexPath row] == 1) {
         AssetDetailsVC *assets_vc = nil;
-        
-        assets_vc = (AssetDetailsVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_ASSET_DETAILS_VC];
-        
-        if (assets_vc != nil)
-        {
-            SbtScannerInfo *scanner_info = [[zt_ScannerAppEngine sharedAppEngine] getScannerByID:[(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
-            [assets_vc setScanner_info:scanner_info];
-            [self.navigationController pushViewController:assets_vc animated:YES];
+        assets_vc = (AssetDetailsVC*)[[UIStoryboard storyboardWithName: SCANNER_STORY_BOARD bundle: [NSBundle mainBundle]] instantiateViewControllerWithIdentifier: ID_ASSET_DETAILS_VC];
+        if (assets_vc != nil) {
+            SbtScannerInfo *scanner_info = [[zt_ScannerAppEngine sharedAppEngine] getScannerByID: [(zt_ActiveScannerVC*)self.tabBarController getScannerID]];
+            [assets_vc setScanner_info: scanner_info];
+            [self.navigationController pushViewController: assets_vc animated: YES];
         }
     }
-
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    if (cell != nil)
-    {
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        //[cell setSelected:NO animated:YES];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath: indexPath];
+    if (cell != nil) {
+        [tableView deselectRowAtIndexPath: indexPath animated: YES];
+//        [cell setSelected: NO animated: YES];
     }
 }
 

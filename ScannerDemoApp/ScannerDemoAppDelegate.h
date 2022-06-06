@@ -23,14 +23,11 @@
  */
 #define SST_SKIP_BACKGROUND_DETECTION_TASK
 
-@interface zt_ScannerDemoAppDelegate : UIResponder <UIApplicationDelegate,UNUserNotificationCenterDelegate>
-{
+@interface zt_ScannerDemoAppDelegate: UIResponder <UIApplicationDelegate,UNUserNotificationCenterDelegate> {
     UINavigationController *m_NavigationVC;
 #ifndef SST_SKIP_BACKGROUND_DETECTION_TASK    
     UIBackgroundTaskIdentifier m_BackgroundHelperTask;
 #endif /* SST_SKIP_BACKGROUND_DETECTION_TASK */
 }
-
 @property (strong, nonatomic) UIWindow *window;
-
 @end
