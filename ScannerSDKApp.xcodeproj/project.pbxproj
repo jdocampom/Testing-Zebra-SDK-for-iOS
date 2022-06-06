@@ -123,7 +123,6 @@
 		7D45BB4A1DE1E91F00B66462 /* ZZStoreOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D45BB161DE1E91F00B66462 /* ZZStoreOutputStream.m */; };
 		7D61570A1BD4A31A009E5D12 /* AssetDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D6157091BD4A31A009E5D12 /* AssetDetailsVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7D61570E1BD4B901009E5D12 /* SbtScannerInfo+AssetsTblRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D61570D1BD4B901009E5D12 /* SbtScannerInfo+AssetsTblRepresentation.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		7D61C2951D2A59F900D59AD0 /* FWFilesTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D61C2941D2A59F900D59AD0 /* FWFilesTableVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7D61C29A1D2A5A3600D59AD0 /* FWFileCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D61C2981D2A5A3600D59AD0 /* FWFileCellTableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7D61C29B1D2A5A3600D59AD0 /* FWFileCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D61C2991D2A5A3600D59AD0 /* FWFileCellTableViewCell.xib */; };
 		7D96F0BA1D22BD2C00AE286C /* DownPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D96F0B71D22BD2C00AE286C /* DownPicker.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -366,8 +365,6 @@
 		7D6157091BD4A31A009E5D12 /* AssetDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetDetailsVC.m; sourceTree = "<group>"; };
 		7D61570C1BD4B901009E5D12 /* SbtScannerInfo+AssetsTblRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SbtScannerInfo+AssetsTblRepresentation.h"; path = "Categories/SbtScannerInfo+AssetsTblRepresentation.h"; sourceTree = "<group>"; };
 		7D61570D1BD4B901009E5D12 /* SbtScannerInfo+AssetsTblRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "SbtScannerInfo+AssetsTblRepresentation.m"; path = "Categories/SbtScannerInfo+AssetsTblRepresentation.m"; sourceTree = "<group>"; };
-		7D61C2931D2A59F900D59AD0 /* FWFilesTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWFilesTableVC.h; sourceTree = "<group>"; };
-		7D61C2941D2A59F900D59AD0 /* FWFilesTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FWFilesTableVC.m; sourceTree = "<group>"; };
 		7D61C2971D2A5A3600D59AD0 /* FWFileCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWFileCellTableViewCell.h; path = FWFIleCell/FWFileCellTableViewCell.h; sourceTree = "<group>"; };
 		7D61C2981D2A5A3600D59AD0 /* FWFileCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWFileCellTableViewCell.m; path = FWFIleCell/FWFileCellTableViewCell.m; sourceTree = "<group>"; };
 		7D61C2991D2A5A3600D59AD0 /* FWFileCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FWFileCellTableViewCell.xib; path = FWFIleCell/FWFileCellTableViewCell.xib; sourceTree = "<group>"; };
@@ -568,8 +565,6 @@
 				7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */,
 				7DFA20C81D1EBDCB0087C3B1 /* BTLEScanToConnectVC.h */,
 				7DFA20C91D1EBDCB0087C3B1 /* BTLEScanToConnectVC.m */,
-				7D61C2931D2A59F900D59AD0 /* FWFilesTableVC.h */,
-				7D61C2941D2A59F900D59AD0 /* FWFilesTableVC.m */,
 				787C4D9C180D76C9006C736F /* Supporting Files */,
 				7DFE23EE1C0576F500E2FCFE /* ScannerDetailsVC.h */,
 				7DFE23EF1C0576F500E2FCFE /* ScannerDetailsVC.m */,
@@ -1062,7 +1057,6 @@
 				7D45BB351DE1E91F00B66462 /* DGActivityIndicatorTripleRingsAnimation.m in Sources */,
 				78DF5C41183F629A00274BDD /* ActiveScannerImageVC.m in Sources */,
 				7D45BB361DE1E91F00B66462 /* DGActivityIndicatorTwoDotsAnimation.m in Sources */,
-				7D61C2951D2A59F900D59AD0 /* FWFilesTableVC.m in Sources */,
 				7D45BB371DE1E91F00B66462 /* DGActivityIndicatorView.m in Sources */,
 				7D45BB181DE1E91F00B66462 /* DGActivityIndicatorBallClipRotateAnimation.m in Sources */,
 				7D45BB461DE1E91F00B66462 /* ZZOldArchiveEntry.mm in Sources */,

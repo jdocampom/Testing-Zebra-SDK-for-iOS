@@ -8,7 +8,7 @@
 
 #import "UpdateFirmwareVC.h"
 #import "SbtSdkDefs.h"
-#import "FWFilesTableVC.h"
+//#import "FWFilesTableVC.h"
 #import "AppSettingsKeys.h"
 #import "FWUpdateModel.h"
 #import "PFWModelContentReader.h"
@@ -925,19 +925,19 @@ alpha:1.0]
     [self adjustHelpViewVisibility:YES];
 }
 
-- (IBAction)selectDatFile:(id)sender
-{
-    [self invokeFileSelector];
-}
+//- (IBAction)selectDatFile:(id)sender
+//{
+//    [self invokeFileSelector];
+//}
 
-- (void)invokeFileSelector
-{
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    FWFilesTableVC *startingVC = [[FWFilesTableVC alloc] initWithPath:documentsDirectory];
-    
-    [self.navigationController pushViewController:startingVC animated:YES];
-}
+//- (void)invokeFileSelector
+//{
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    FWFilesTableVC *startingVC = [[FWFilesTableVC alloc] initWithPath:documentsDirectory];
+//
+//    [self.navigationController pushViewController:startingVC animated:YES];
+//}
 
 - (void)showFWUPdateView
 {
