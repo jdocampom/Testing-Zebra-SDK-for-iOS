@@ -134,12 +134,12 @@
 
 /// Open firmware update on firmware update complete
 /// @param currentScannerID  connected scanner's id
-- (void)showFirmwareUpdate:(int)currentScannerID
-{
-    UpdateFirmwareVC *firmware_vc = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_FWUPDATE_DAT_VC];
-    [firmware_vc setScannerID:currentScannerID];
-    [[self navigationController] pushViewController:firmware_vc animated:NO];
-}
+//- (void)showFirmwareUpdate:(int)currentScannerID
+//{
+//    UpdateFirmwareVC *firmware_vc = [[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_FWUPDATE_DAT_VC];
+//    [firmware_vc setScannerID:currentScannerID];
+//    [[self navigationController] pushViewController:firmware_vc animated:NO];
+//}
 
 
 - (void)showSettingsPage

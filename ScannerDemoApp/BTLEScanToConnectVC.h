@@ -14,7 +14,7 @@
  ******************************************************************************/
 #import "SbtSdkDefs.h"
 #import "ScannerAppEngine.h"
-#import "UpdateFirmwareVC.h"
+//#import "UpdateFirmwareVC.h"
 #import "MainViewTabBarController.h"
 
 @interface BTLEScanToConnectVC : UIViewController <IScannerAppEngineDevConnectionsDelegate,BarcodeEventTriggerDelegate>

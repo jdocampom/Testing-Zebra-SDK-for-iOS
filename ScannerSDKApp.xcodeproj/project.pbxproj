@@ -133,7 +133,6 @@
 		7DFA21BD1D20F57A0087C3B1 /* BarcodeGen128.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFA21BC1D20F57A0087C3B1 /* BarcodeGen128.m */; };
 		7DFB498F1DE0832100FEAA70 /* PluginFileContentReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB498E1DE0832100FEAA70 /* PluginFileContentReader.m */; };
 		7DFB49931DE0842800FEAA70 /* FWUpdateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFB49921DE0842800FEAA70 /* FWUpdateModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		7DFD987D1D16624000D0757E /* UpdateFirmwareVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		7DFE23F01C0576F500E2FCFE /* ScannerDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DFE23EF1C0576F500E2FCFE /* ScannerDetailsVC.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B44F15B11BB44A700008ADE1 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15A71BB44A700008ADE1 /* Icon-60@2x.png */; };
 		B44F15B21BB44A700008ADE1 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F15A81BB44A700008ADE1 /* Icon-60@3x.png */; };
@@ -383,8 +382,6 @@
 		7DFB498E1DE0832100FEAA70 /* PluginFileContentReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PluginFileContentReader.m; path = Reader/PluginFileContentReader.m; sourceTree = "<group>"; };
 		7DFB49911DE0842700FEAA70 /* FWUpdateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FWUpdateModel.h; path = Model/FWUpdateModel.h; sourceTree = "<group>"; };
 		7DFB49921DE0842800FEAA70 /* FWUpdateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FWUpdateModel.m; path = Model/FWUpdateModel.m; sourceTree = "<group>"; };
-		7DFD987B1D16624000D0757E /* UpdateFirmwareVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateFirmwareVC.h; sourceTree = "<group>"; };
-		7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateFirmwareVC.m; sourceTree = "<group>"; };
 		7DFE23EE1C0576F500E2FCFE /* ScannerDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerDetailsVC.h; sourceTree = "<group>"; };
 		7DFE23EF1C0576F500E2FCFE /* ScannerDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerDetailsVC.m; sourceTree = "<group>"; };
 		B40E0B0A1BCD9FE700556513 /* libsymbolbt-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libsymbolbt-sdk.a"; path = "symbolbt-sdk/libsymbolbt-sdk.a"; sourceTree = "<group>"; };
@@ -561,8 +558,6 @@
 				78BDAE54199240010043FEB6 /* DecodeEvent.m */,
 				7D6157081BD4A31A009E5D12 /* AssetDetailsVC.h */,
 				7D6157091BD4A31A009E5D12 /* AssetDetailsVC.m */,
-				7DFD987B1D16624000D0757E /* UpdateFirmwareVC.h */,
-				7DFD987C1D16624000D0757E /* UpdateFirmwareVC.m */,
 				7DFA20C81D1EBDCB0087C3B1 /* BTLEScanToConnectVC.h */,
 				7DFA20C91D1EBDCB0087C3B1 /* BTLEScanToConnectVC.m */,
 				787C4D9C180D76C9006C736F /* Supporting Files */,
@@ -1049,7 +1044,6 @@
 				78BDAE55199240010043FEB6 /* DecodeEvent.m in Sources */,
 				7DFE23F01C0576F500E2FCFE /* ScannerDetailsVC.m in Sources */,
 				7D45BB421DE1E91F00B66462 /* ZZFileChannelOutput.m in Sources */,
-				7DFD987D1D16624000D0757E /* UpdateFirmwareVC.m in Sources */,
 				7DFA20CA1D1EBDCB0087C3B1 /* BTLEScanToConnectVC.m in Sources */,
 				787C4E01181822AE006C736F /* ScannerAppEngine.m in Sources */,
 				7D45BB2B1DE1E91F00B66462 /* DGActivityIndicatorLineScalePartyAnimation.m in Sources */,

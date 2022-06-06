@@ -20,7 +20,7 @@
 #import "ScannerAppEngine.h"
 #import "ActiveScannerVC.h"
 //#import "BeeperSettingsVC.h"
-#import "UpdateFirmwareVC.h"
+//#import "UpdateFirmwareVC.h"
 #import "RMDAttributes.h"
 #import "VirtualTetherTableViewController.h"
 #import "NSString+Contain.h"
@@ -304,18 +304,18 @@
             [activityView showAlertWithView:self.view withTarget:self withMethod:@selector(performActionVibrationFeedBack:) withObject:in_xml withString:nil];
         }
         
-        else if ([indexPath row] == 7 /*(2 + (m_HideBeeperSettings == YES ? 0 : 1))*/ /* 4 */) /* disable scanning */
-        {
-            UpdateFirmwareVC *updateFW_vc = nil;
-            
-            updateFW_vc = (UpdateFirmwareVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_FWUPDATE_DAT_VC];
-            
-            if (updateFW_vc != nil)
-            {
-                [updateFW_vc setScannerID:m_ScannerID];
-                [self.navigationController pushViewController:updateFW_vc animated:YES];
-            }
-        }
+//        else if ([indexPath row] == 7 /*(2 + (m_HideBeeperSettings == YES ? 0 : 1))*/ /* 4 */) /* disable scanning */
+//        {
+//            UpdateFirmwareVC *updateFW_vc = nil;
+//            
+//            updateFW_vc = (UpdateFirmwareVC*)[[UIStoryboard storyboardWithName:SCANNER_STORY_BOARD bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:ID_SCANNER_FWUPDATE_DAT_VC];
+//            
+//            if (updateFW_vc != nil)
+//            {
+//                [updateFW_vc setScannerID:m_ScannerID];
+//                [self.navigationController pushViewController:updateFW_vc animated:YES];
+//            }
+//        }
         
         else if ([indexPath row] == 8)
         {

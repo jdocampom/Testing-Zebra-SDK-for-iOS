@@ -19,7 +19,7 @@
 #import "ScannerAppEngine.h"
 #import "AppSettingsKeys.h"
 #import "config.h"
-#import "UpdateFirmwareVC.h"
+//#import "UpdateFirmwareVC.h"
 #import "ScannerAppEngine.h"
 #import "ConnectionManager.h"
 #import "RMDAttributes.h"
