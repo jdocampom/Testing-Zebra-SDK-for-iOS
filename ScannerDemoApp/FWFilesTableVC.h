@@ -12,17 +12,12 @@
 #import "UpdateFirmwareVC.h"
 
 @protocol FWFilesTableDelegate <NSObject>
-
-- (void)getSelectedFWFile:(NSString*)path;
-
+- (void)getSelectedFWFile:(NSString*) path;
 @end
 
 @interface FWFilesTableVC : UITableViewController <FileSelectedDelegate>
-
-- (id)initWithPath:(NSString *)path;
-
-@property (strong) NSString *path;
-@property (strong) NSArray *files;
+@property (strong) NSString* path;
+@property (strong) NSArray* files;
 @property (nonatomic, strong) id<FWFilesTableDelegate> delegate;
-
+- (id) initWithPath:(NSString*) path;
 @end

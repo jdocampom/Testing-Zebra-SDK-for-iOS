@@ -18,22 +18,19 @@
 
 @implementation zt_BarcodeList
 
-- (id)initWithMotoID:(int)moto_id andName:(NSString *)scannerName
-{
+- (id) initWithMotoID:(int) moto_id andName:(NSString*) scannerName {
     self = [super init];
-	if (self != nil)
-    {
+	if (self != nil) {
         m_MotoScannerID = moto_id;
         m_BarcodeList = [[NSMutableArray alloc] init];
-        m_ScannerName = [[NSString alloc] initWithString:scannerName];
+        m_ScannerName = [[NSString alloc] initWithString: scannerName];
     }
     return self;
 }
 
-- (void)dealloc
-{
-    if (m_BarcodeList != nil)
-    {
+
+- (void) dealloc {
+    if (m_BarcodeList != nil) {
         [m_BarcodeList removeAllObjects];
         [m_BarcodeList release];
         [m_ScannerName release];
@@ -41,31 +38,29 @@
     [super dealloc];
 }
 
-- (int)getScannerID
-{
+- (int) getScannerID {
     return m_MotoScannerID;
 }
 
-- (NSArray*)getBarcodeList
-{
+
+- (NSArray*) getBarcodeList {
     return m_BarcodeList;
 }
 
-- (NSString *) getScannerName
-{
+
+- (NSString*) getScannerName {
     return m_ScannerName;
 }
 
-- (void) clearBarcodeList
-{
+
+- (void) clearBarcodeList {
     [m_BarcodeList removeAllObjects];
 }
 
-- (void)addBarcodeData:(zt_BarcodeData*)decode_data
-{
-    if (m_BarcodeList != nil)
-    {
-        [m_BarcodeList addObject:decode_data];
+
+- (void)addBarcodeData:(zt_BarcodeData*) decode_data {
+    if (m_BarcodeList != nil) {
+        [m_BarcodeList addObject: decode_data];
     }
 }
 

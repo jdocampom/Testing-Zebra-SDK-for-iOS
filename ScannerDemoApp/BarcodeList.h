@@ -17,20 +17,18 @@
 #import <Foundation/Foundation.h>
 #import "DecodeEvent.h"
 
-@interface zt_BarcodeList : NSObject
-{
+@interface zt_BarcodeList: NSObject {
     int m_MotoScannerID;
     NSString *m_ScannerName;
     NSMutableArray *m_BarcodeList;
 }
 
-- (id)initWithMotoID:(int)moto_id andName:(NSString *)scannerName;
-- (void)dealloc;
-
-- (int)getScannerID;
-- (NSArray*)getBarcodeList;
-- (NSString *)getScannerName;
+- (id) initWithMotoID:(int) moto_id andName:(NSString*) scannerName;
+- (int) getScannerID;
+- (NSArray*) getBarcodeList;
+- (NSString*) getScannerName;
+- (void) dealloc;
 - (void) clearBarcodeList;
-- (void)addBarcodeData:(zt_BarcodeData*)decode_data;
+- (void) addBarcodeData:(zt_BarcodeData*) decode_data;
 
 @end

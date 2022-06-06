@@ -16,7 +16,6 @@
     UIBarButtonItem *backBarButton;
 }
 
-// remove cancel button and restore back button
 - (void) operationComplete;
 
 @end

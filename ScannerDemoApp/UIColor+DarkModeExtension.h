@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 ///  UIColor extension for color changed, when dark mode changed
 @interface UIColor (DarkModeExtension)
 
-+(UIColor*)getDarkModeLabelTextColor:(UITraitCollection *)traitCollection;
-+(UIColor*)getDarkModeViewBackgroundColor:(UITraitCollection *)traitCollection;
-+(UIColor*)getDarkModeSectionViewBackgroundColor;
-+(UIColor*)getAppPrimaryColor;
++ (UIColor*) getDarkModeLabelTextColor:(UITraitCollection*) traitCollection;
++ (UIColor*) getDarkModeViewBackgroundColor:(UITraitCollection*) traitCollection;
++ (UIColor*) getDarkModeSectionViewBackgroundColor;
++ (UIColor*) getAppPrimaryColor;
 
 @end
 
