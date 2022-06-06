@@ -9,19 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @protocol FileSelectedDelegate <NSObject>
-
-- (void)didSelectFile:(NSString*)filePath;
-
+- (void) didSelectFile:(NSString*) filePath;
 @end
 
-@interface FWFileCellTableViewCell : UITableViewCell
-
+@interface FWFileCellTableViewCell: UITableViewCell
 @property id<FileSelectedDelegate> delegate;
-
 @property (weak, nonatomic) IBOutlet UIButton *okButton;
 @property (weak, nonatomic) IBOutlet UIImageView *fileImage;
 @property (weak, nonatomic) IBOutlet UILabel *fileName;
-
-- (IBAction)clickSelected:(id)sender;
-
+- (IBAction) clickSelected:(id) sender;
 @end

@@ -13,19 +13,15 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol BarcodeEventTriggerDelegate
-
 @required
--(void)showActiveScannerVC:(NSNumber*)scannerID aBarcodeView:(BOOL)barcodeView aAnimated:(BOOL)animated;
--(void)showVirtualTetherUI;
+- (void) showActiveScannerVC:(NSNumber*) scannerID aBarcodeView:(BOOL) barcodeView aAnimated:(BOOL) animated;
+- (void) showVirtualTetherUI;
 @end
 
-@interface MainViewTabBarController : UITabBarController <IScannerAppEngineDevEventsDelegate,UITabBarControllerDelegate,VirtualTetherAlarmEventProtocol,IScannerAppEngineDevConnectionsDelegate>
-
+@interface MainViewTabBarController: UITabBarController <IScannerAppEngineDevEventsDelegate, UITabBarControllerDelegate, VirtualTetherAlarmEventProtocol, IScannerAppEngineDevConnectionsDelegate>
 @property (retain, nonatomic) IBOutlet UITabBar *tabBarView;
-
 @property (weak,nonatomic) id <BarcodeEventTriggerDelegate> delegateForBle;
 @property (weak,nonatomic) id <BarcodeEventTriggerDelegate> delegateForMfi;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,5 +9,4 @@
 #import "FWUpdateModel.h"
 
 @implementation FWUpdateModel
-
 @end

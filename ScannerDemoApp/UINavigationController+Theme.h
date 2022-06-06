@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UINavigationControllerTheme : UINavigationController
-
-
-
+@interface UINavigationControllerTheme: UINavigationController
 @end
 
 NS_ASSUME_NONNULL_END

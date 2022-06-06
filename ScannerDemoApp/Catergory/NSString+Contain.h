@@ -10,13 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
-/// Contain extension method for searching a  string 
+/// Contain extension method for searching a string
 @interface NSString (Contain)
-
--(BOOL)containsSubString: (NSString*)substring;
-
-
+- (BOOL) containsSubString:(NSString*) substring;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,22 +10,23 @@
 
 @implementation FWFileCellTableViewCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void) awakeFromNib {
+    /// Initialization code
     [super awakeFromNib];
     self.okButton.layer.cornerRadius = 3.0;
     self.okButton.layer.borderWidth = 2.0;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void) setSelected:(BOOL) selected animated:(BOOL) animated {
+    [super setSelected: selected animated: animated];
 }
 
-- (IBAction)clickSelected:(id)sender {
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(didSelectFile:)]) {
-        [self.delegate didSelectFile:self.fileName.text];
+
+- (IBAction) clickSelected:(id) sender {
+    if (self.delegate != nil && [self.delegate respondsToSelector: @selector(didSelectFile:)]) {
+        [self.delegate didSelectFile: self.fileName.text];
     }
 }
+
 @end
