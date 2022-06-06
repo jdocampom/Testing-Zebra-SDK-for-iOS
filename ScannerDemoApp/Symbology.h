@@ -16,22 +16,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface zt_Symbology : NSObject
-{
+@interface zt_Symbology: NSObject {
     NSString *m_SymbologyName;
     int m_RMDAttributeID;
     BOOL m_Enabled;
     BOOL m_Supported;
 }
 
-- (id)init:(NSString*)name aRMDAttr:(int)attr_id;
-- (void)dealloc;
-
-- (int)getRMDAttributeID;
-- (BOOL)isEnabled;
-- (NSString*)getSymbologyName;
-- (void)setEnabled:(BOOL)enabled;
-- (BOOL)isSupported;
-- (void)setSupported:(BOOL)supported;
+- (id) init:(NSString*)name aRMDAttr:(int)attr_id;
+- (void) dealloc;
+- (int) getRMDAttributeID;
+- (BOOL) isEnabled;
+- (NSString*) getSymbologyName;
+- (void) setEnabled:(BOOL) enabled;
+- (BOOL) isSupported;
+- (void) setSupported:(BOOL) supported;
 
 @end

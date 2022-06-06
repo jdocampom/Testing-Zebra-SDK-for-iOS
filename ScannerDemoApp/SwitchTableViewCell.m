@@ -18,57 +18,51 @@
 
 @implementation zt_SwitchTableViewCell
 
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
-{
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if (self)
-    {
-        // Initialization code
+- (id) initWithStyle:(UITableViewCellStyle) style reuseIdentifier:(NSString*) reuseIdentifier {
+    self = [super initWithStyle: style reuseIdentifier: reuseIdentifier];
+    if (self) {
         m_Index = 0;
     }
     return self;
 }
 
-- (void)dealloc
-{
+
+- (void) dealloc {
     [_cellTitle release];
     [_cellSwitch release];
     [super dealloc];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
+- (void) setSelected:(BOOL) selected animated:(BOOL) animated {
+    [super setSelected: selected animated: animated];
 }
 
-- (int)getIndex
-{
+
+- (int) getIndex {
     return m_Index;
 }
 
-- (void)setIndex:(int)index
-{
+
+- (void) setIndex:(int)index {
     m_Index = index;
 }
 
-- (void)setDelegate:(id <ISwitchTableViewCellProtocol>)delegate
-{
+
+- (void) setDelegate:(id <ISwitchTableViewCellProtocol>) delegate {
     m_Delegate = delegate;
 }
 
-- (IBAction)switchSymbologyValueChanged:(id)sender
-{
-    if (m_Delegate != nil)
-    {
-        [m_Delegate switchValueChanged:[_cellSwitch isOn] aIndex:m_Index];
+
+- (IBAction) switchSymbologyValueChanged:(id)sender {
+    if (m_Delegate != nil) {
+        [m_Delegate switchValueChanged: [_cellSwitch isOn] aIndex: m_Index];
     }
 }
 
-- (void)setSwitchOn:(BOOL)on
-{
-    [_cellSwitch setOn:on animated:NO];
+
+- (void) setSwitchOn:(BOOL)on {
+    [_cellSwitch setOn: on animated: NO];
 }
 
 @end

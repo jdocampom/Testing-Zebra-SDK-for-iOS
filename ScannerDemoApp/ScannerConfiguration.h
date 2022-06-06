@@ -16,15 +16,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface zt_ScannerConfiguration : NSObject
-{
+@interface zt_ScannerConfiguration: NSObject {
     NSString *m_ConfigurationName;
     NSString *m_ConfigurationCode;
 }
 
-- (id)initWithName:(NSString*)name withCode:(NSString*)code;
-
-- (NSString*)getConfigurationName;
-- (NSString*)getConfigurationCode;
+- (id) initWithName:(NSString*)name withCode:(NSString*) code;
+- (NSString*) getConfigurationName;
+- (NSString*) getConfigurationCode;
 
 @end

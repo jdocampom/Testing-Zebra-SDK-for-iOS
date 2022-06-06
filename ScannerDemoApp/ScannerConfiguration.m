@@ -18,38 +18,33 @@
 
 @implementation zt_ScannerConfiguration
 
-- (id)initWithName:(NSString*)name withCode:(NSString*)code
-{
+- (id) initWithName:(NSString*)name withCode:(NSString*) code {
     self = [super init];
-    if (self != nil)
-    {
-        m_ConfigurationName = [[NSString alloc] initWithFormat:@"%@", name];
-        m_ConfigurationCode = [[NSString alloc] initWithFormat:@"%@", code];
+    if (self != nil) {
+        m_ConfigurationName = [[NSString alloc] initWithFormat: @"%@", name];
+        m_ConfigurationCode = [[NSString alloc] initWithFormat: @"%@", code];
     }
     return self;
 }
 
-- (void)dealloc
-{
-    if (m_ConfigurationCode != nil)
-    {
+
+- (void) dealloc {
+    if (m_ConfigurationCode != nil) {
         [m_ConfigurationCode release];
     }
-    
-    if (m_ConfigurationName != nil)
-    {
+    if (m_ConfigurationName != nil) {
         [m_ConfigurationName release];
     }
     [super dealloc];
 }
 
-- (NSString*)getConfigurationName
-{
+
+- (NSString*) getConfigurationName {
     return m_ConfigurationName;
 }
 
-- (NSString*)getConfigurationCode
-{
+
+- (NSString*) getConfigurationCode {
     return m_ConfigurationCode;
 }
 

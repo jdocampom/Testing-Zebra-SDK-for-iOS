@@ -18,12 +18,10 @@
 
 @implementation zt_Symbology
 
-- (id)init:(NSString*)name aRMDAttr:(int)attr_id
-{
+- (id) init:(NSString*) name aRMDAttr:(int) attr_id {
     self = [super init];
-    if (self != nil)
-    {
-        m_SymbologyName = [[NSString alloc] initWithFormat:@"%@", name];
+    if (self != nil) {
+        m_SymbologyName = [[NSString alloc] initWithFormat: @"%@", name];
         m_RMDAttributeID = attr_id;
         m_Enabled = NO;
         m_Supported = NO;
@@ -31,43 +29,41 @@
     return self;
 }
 
-- (void)dealloc
-{
-    if (m_SymbologyName != nil)
-    {
+
+- (void) dealloc {
+    if (m_SymbologyName != nil) {
         [m_SymbologyName release];
     }
-
     [super dealloc];
 }
 
-- (int)getRMDAttributeID
-{
+
+- (int) getRMDAttributeID {
     return m_RMDAttributeID;
 }
 
-- (BOOL)isEnabled
-{
+
+- (BOOL) isEnabled {
     return m_Enabled;
 }
 
-- (NSString*)getSymbologyName
-{
+
+- (NSString*) getSymbologyName {
     return m_SymbologyName;
 }
 
-- (void)setEnabled:(BOOL)enabled
-{
+
+- (void) setEnabled:(BOOL) enabled {
     m_Enabled = enabled;
 }
 
-- (BOOL)isSupported
-{
+
+- (BOOL) isSupported {
     return m_Supported;
 }
 
-- (void)setSupported:(BOOL)supported
-{
+
+- (void) setSupported:(BOOL) supported {
     m_Supported = supported;
 }
 

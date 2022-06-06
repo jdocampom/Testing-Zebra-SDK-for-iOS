@@ -17,15 +17,11 @@
 #import <UIKit/UIKit.h>
 #import "ScannerConfiguration.h"
 
-@interface zt_ConfigurationSingleVC : UIViewController
-{
+@interface zt_ConfigurationSingleVC: UIViewController {
     zt_ScannerConfiguration *m_Configuration;
-    
-    IBOutlet UIImageView *m_imgConfigurationBarcode;    
+    IBOutlet UIImageView *m_imgConfigurationBarcode;
     IBOutlet UILabel *m_lblConfigurationNotice;
 }
-
-- (void)setConfiguration:(zt_ScannerConfiguration*)config;
+- (void)setConfiguration:(zt_ScannerConfiguration*) config;
 - (void)drawConfigurationBarcode;
-
 @end
